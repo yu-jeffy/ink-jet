@@ -16,14 +16,13 @@ This application is *not* in response to an RFP nor a follow-up grant.
 
 ### Overview
 
-Please provide the following:
+**One liner:** Platform for Generative AI Assisted Smart Contract Development with Retrieval Augmented Generation
 
-- If the name of your project is not descriptive, a tagline (one sentence summary).
-- A brief description of your project.
-- An indication of how your project relates to / integrates into Substrate / Polkadot / Kusama.
-- An indication of why your team is interested in creating this project.
+`Ink!jet` is a platform designed to fine-tune generative AI for the specific intent of improving the development lifecycle of `ink!` smart contracts within the Polkadot ecosystem. Recognizing the technically intricate nature of smart contracts and the high level of expertise they demand, our project aims to simplify these complexities, thereby democratizing the creation process. Our goal is to enhance the productivity of existing developers through bootstrapping and code feedback, while simultaneously lowering the barrier of entry for new developers.
 
-One liner: 
+Existing generative AI have limitations in both the amount of `Rust` and `ink!` code in their training data. Our platform uses a retrieval-augmented generation pipeline with datasets of existing `ink!` smart contracts to bridge this knowledge gap."
+
+Our team's motivation for the project is twofold. First, we are supporters of decentralized technology and its potential to redefine the digital landscape. We believe that the future of blockchain depends on cross-chain interoperability, which places Polkadot at the center of this emerging need. Second, we are deeply intrigued by the potential of generative AI in software engineering. Our aim is to push the boundaries of what these AI models can achieve in novel contexts, such as the `ink!` programming language, and to explore solutions that empower developers to build the decentralized ecosystem.
 
 ### Project Details
 
@@ -205,8 +204,7 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 |       1. | UI/UX Updates | Updated `React.js` to serve additional features in the application. |
 |       2. | Templates | Development of a template system for users to easily bootstrap building smart contracts. User can pick from a list of common use cases, and be provided a template smart contract to start with. |
 |       3. | Smart Contract Analysis | A feature to break down smart contracts into chunks, scanning each for functionality and errors, and suggest improvements or fixes. Contract will be broken down into parts, such as its functions, and each will be analyzed by the LLM. |
-|       4. | Final System Testing | System-wide testing of all features, ensuring full integration and operational stability. |
-...
+|       4. | Final Application Testing | System-wide testing of all features, ensuring full integration and operational stability. |
 
 
 ## Future Plans
