@@ -4,17 +4,15 @@
 >
 > See the [Grants Program Process](https://github.com/w3f/Grants-Program/#pencil-process) on how to submit a proposal.
 
-- **Team Name:** Legal name of your team (e.g. JsonCorp)
+- **Team Name:** Parallel Polis
 - **Payment Address:** In the case of fiat payment, please share your bank account privately with grants@web3.foundation via your contact email (see below) and enter the date when you shared the information with us (e.g. Fiat 24.12.1971, 11:59) here. Otherwise, provide the Polkadot (for USDC & USDT) payment address. Please also specify the currency. (e.g. 0x8920... (USDC))
-- **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 1, 2 or 3
+- **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 3
 
 > :exclamation: *The combination of your GitHub account submitting the application and the payment address above will be your unique identifier during the program. Please keep them safe.*
 
 ## Project Overview :page_facing_up:
 
-If this application is in response to an RFP, please indicate this on the first line of this section.
-
-If this is an application for a follow-up grant (the continuation of an earlier, successful W3F grant), please provide the name and/or pull request of said grant on the first line of this section.
+This application is *not* in response to an RFP nor a follow-up grant.
 
 ### Overview
 
@@ -24,6 +22,8 @@ Please provide the following:
 - A brief description of your project.
 - An indication of how your project relates to / integrates into Substrate / Polkadot / Kusama.
 - An indication of why your team is interested in creating this project.
+
+One liner: 
 
 ### Project Details
 
@@ -119,39 +119,93 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 
 ### Overview
 
-- **Total Estimated Duration:** Duration of the whole project (e.g. 2 months)
-- **Full-Time Equivalent (FTE):**  Average number of full-time employees working on the project throughout its duration (see [Wikipedia](https://en.wikipedia.org/wiki/Full-time_equivalent), e.g. 2 FTE)
-- **Total Costs:** Requested amount in USD for the whole project (e.g. 12,000 USD). Note that the acceptance criteria and additional benefits vary depending on the [level](../README.md#level_slider-levels) of funding requested.
+- **Total Estimated Duration:** 5 months
+- **Full-Time Equivalent (FTE):** 3 FTE
+- **Total Costs:** 30,000 USD
 
-### Milestone 1 Example — Basic functionality
-
-- **Estimated duration:** 1 month
-- **FTE:**  1,5
-- **Costs:** 8,000 USD
-
-> :exclamation: **The default deliverables 0a-0d below are mandatory for all milestones**, and deliverable 0e at least for the last one.
-
-| Number | Deliverable | Specification |
-| -----: | ----------- | ------------- |
-| **0a.** | License | Apache 2.0 / GPLv3 / MIT / Unlicense |
-| **0b.** | Documentation | We will provide both **inline documentation** of the code and a basic **tutorial** that explains how a user can (for example) spin up one of our Substrate nodes and send test transactions, which will show how the new functionality works. |
-| **0c.** | Testing and Testing Guide | Core functions will be fully covered by comprehensive unit tests to ensure functionality and robustness. In the guide, we will describe how to run these tests. |
-| **0d.** | Docker | We will provide a Dockerfile(s) that can be used to test all the functionality delivered with this milestone. |
-| 0e. | Article | We will publish an **article**/workshop that explains [...] (what was done/achieved as part of the grant). (Content, language, and medium should reflect your target audience described above.) |
-| 1. | Substrate module: X | We will create a Substrate module that will... (Please list the functionality that will be implemented for the first milestone. You can refer to details provided in previous sections.) |
-| 2. | Substrate module: Y | The Y Substrate module will... |
-| 3. | Substrate module: Z | The Z Substrate module will... |
-| 4. | Substrate chain | Modules X, Y & Z of our custom chain will interact in such a way... (Please describe the deliverable here as detailed as possible) |
-| 5. | Library: ABC | We will deliver a JS library that will implement the functionality described under "ABC Library" |
-| 6. | Smart contracts: ... | We will deliver a set of ink! smart contracts that will...
-
-
-### Milestone 2 Example — Additional features
+### Milestone 1 — Prototype, Initial RAG System and Data Pipeline
 
 - **Estimated Duration:** 1 month
-- **FTE:**  1,5
-- **Costs:** 8,000 USD
+- **FTE:**  3
+- **Costs:** 6,000 USD
 
+|  Number  | Deliverable | Specification |
+| -------: | ----------- | ------------- |
+|  **0a.** | License | Open-sourced under Apache 2.0. |
+|  **0b.** | Documentation | Code comments. Documentation for the prototype architecture and the setup process, explaining how a user can run a local instance of the prototype RAG system with our initial data. |
+|  **0c.** | Testing Guide | Unit tests will be provided for the prototype, with a testing guide explaining how to run them. |
+|  **0d.** | Docker | We will include a `Dockerfile` that enables easy deployment and testing of the RAG system. |
+|       1. | Initial Prototype | Development of a basic LlamaIndex RAG system prototype integrated with GPT-4, using sentence embeddings. |
+|       2. | Data Collection | Collection of a small set of `ink!` smart contracts for initial embedding and retrieval testing. Smart contracts will be converted from `.rs` files to `JSON`, with identifying metadata. |
+|       3. | Loading and Embedding Pipeline | Pipeline for loading in `ink!` smart contracts as `JSON` files, and generating embeddings to build the initial vector database. |
+|       4. | Vector Database | `Postgres` database, with `pgvector`, will be used to store embeddings from processed `ink!` smart contracts. |
+
+### Milestone 2 — Smart Contract Dataset, Embeddings for Vector Database
+
+- **Estimated Duration:** 1 month
+- **FTE:**  3
+- **Costs:** 6,000 USD
+
+|  Number  | Deliverable | Specification |
+| -------: | ----------- | ------------- |
+|  **0a.** | License | Open-sourced under Apache 2.0. |
+|  **0b.** | Documentation | Code comments. Documentation on the process vectorization of newly collected smart contracts and updating the vector database. |
+|  **0c.** | Testing Guide | Unit tests for changes to loading and vectorization. Testing guide included for running these tests. |
+|  **0d.** | Docker | `Dockerfile` updated to reflect any changes in RAG system and data pipeline deployment. |
+|       1. | Data Expansion | Collection, categorization, and metadata tagging of `ink!` smart contracts to complete the dataset. |
+|       2. | Embedding Model | Replace default sentence embedding. Implement a HuggingFace embedding model designated for code processing. Ensure model has substantial Rust code in training/fine-tuning data. |
+|       3. | Vector Database | Update the `postgres` vector database to house the code-based embeddings of the complete dataset. |
+
+
+### Milestone 3 — RAG System Integration
+
+- **Estimated Duration:** 1 month
+- **FTE:**  3
+- **Costs:** 6,000 USD
+
+|  Number  | Deliverable | Specification |
+| -------: | ----------- | ------------- |
+|  **0a.** | License | Open-sourced under Apache 2.0. |
+|  **0b.** | Documentation | Code comments. Documentation provided for the integration process, and usage instructions provided for the updated RAG system. |
+|  **0c.** | Testing Guide | Unit tests updated to reflect changes in RAG system. Guide for testing the updated RAG system with various queries included. |
+|  **0d.** | Docker | `Dockerfile` updated with any changes in deployment. |
+|       1. | RAG Integration | Integration of the new dataset and vector database with the prototype RAG system for improved retrieval. |
+|       2. | Query Handling | Updated query parsing and processing using new embedding model to improve smart contract code retrieval. |
+|       3. | System Testing | Testing of RAG retrieval functionality with the updated dataset. Testing of output quality of RAG system. |
+
+### Milestone 4 — UI/UX Development and Front-End Implementation
+
+- **Estimated Duration:** 1 month
+- **FTE:**  3
+- **Costs:** 6,000 USD
+
+|  Number  | Deliverable | Specification |
+| -------: | ----------- | ------------- |
+|  **0a.** | License | Open-sourced under Apache 2.0. |
+|  **0b.** | Documentation | Code comments. UI/UX design documentation and front-end codebase documentation, including setup and deployment procedures. |
+|  **0c.** | Testing Guide | Guide on how to run tests on the `React.js` application. |
+|  **0d.** | Docker | Updated `Dockerfile` to include the `React.js` application and associated dependencies. |
+|       1. | UI/UX Design | Design and development of user interface for the RAG system. |
+|       2. | React.js Application | Development of `React.js` front-end for the RAG system. Code implementation of the UI/UX design. |
+|       3. | Front-End Testing | Comprehensive testing to ensure the front-end application is responsive and stable. |
+
+### Milestone 5 — Additional Features
+
+- **Estimated Duration:** 1 month
+- **FTE:**  3
+- **Costs:** 6,000 USD
+
+|  Number  | Deliverable | Specification |
+| -------: | ----------- | ------------- |
+|  **0a.** | License | Open-sourced under Apache 2.0. |
+|  **0b.** | Documentation | Code comments. Documentation of additional features, including use cases and integration into the existing system. |
+|  **0c.** | Testing Guide | Updated testing guide that includes all features of the application. |
+|  **0d.** | Docker | Finalized `Dockerfile` for the complete system with all features included. |
+|  **0e.** | Article | We will publish an **article** that showcases the development process, application use cases, application demo, and usage of the grant throughout the project cycle. |
+|       1. | UI/UX Updates | Updated `React.js` to serve additional features in the application. |
+|       2. | Templates | Development of a template system for users to easily bootstrap building smart contracts. User can pick from a list of common use cases, and be provided a template smart contract to start with. |
+|       3. | Smart Contract Analysis | A feature to break down smart contracts into chunks, scanning each for functionality and errors, and suggest improvements or fixes. Contract will be broken down into parts, such as its functions, and each will be analyzed by the LLM. |
+|       4. | Final System Testing | System-wide testing of all features, ensuring full integration and operational stability. |
 ...
 
 
