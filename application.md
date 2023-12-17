@@ -62,59 +62,76 @@ Help us locate your project in the Polkadot/Substrate/Kusama landscape and what 
 
 ### Team members
 
-- Name of team leader
-- Names of team members
+Jeffy Yu
+Maximilian Huber
+Kevin Tang
 
 ### Contact
 
-- **Contact Name:** Full name of the contact person in your team
-- **Contact Email:** Contact email (e.g. john@duo.com)
-- **Website:** Your website
+- **Contact Name:** Jeffy Yu
+- **Contact Email:** jeff.yu@parallelpolis.llc
+- **Website:** jyu.llc
 
 ### Legal Structure
 
-- **Registered Address:** Address of your registered legal entity, if available. Please keep it in a single line. (e.g. High Street 1, London LK1 234, UK)
-- **Registered Legal Entity:** Name of your registered legal entity, if available. (e.g. Duo Ltd.)
+- **Registered Address:** 656 W Nopal Ave Mesa, Arizona 85210
+- **Registered Legal Entity:** Parallel Polis
 
 ### Team's experience
 
-Please describe the team's relevant experience. If your project involves development work, we would appreciate it if you singled out a few interesting projects or contributions made by team members in the past.
+We are a research collective focusing on areas in blockchain, machine learning, and artificial intelligence. We have conducted open source research on blockchain network topographies, smart contract auditing, and augmented LLM use cases.
 
-If anyone on your team has applied for a grant at the Web3 Foundation previously, please list the name of the project and legal entity here.
+Our team has an academic background in computer science, and work experience in blockchain development, machine learning, and full stack development. We are looking to bring our skills towards a project that can improve accessibility of the Polkadot developer ecosystem.
+
+Jeffy Yu - Former full stack blockchain engineer at Paystand, a B2B payments company anchoring invoice records on the Ethereum blockchain. A member of the R&D team at Paystand, built a payment network in Rust supported by the Lightning Network to migrate invoicing towards decentralized solutions. Former full stack engineer at Lirn, a decentralized learning platform utilizing ERC-1155 tokens as educational certificates. Research Scientist at Parallel Polis, performing open-sourced technical studies on blockchain and artificial intelligence. Publications can be found [here](https://scholar.google.com/citations?user=zy7ZWqYAAAAJ&hl=en).
+
+Maximilian Huber: Former full stack engineer at CollX Inc., experienced in building RAG retrieval systems and deploying generative AI for specific use cases.
+
+Kevin Tang: Full stack engineer with primary experience in JavaScript and React.js, as well as experience in iOS-development at Priceline.com. Experience developing and maintaining systems in active deployment.
 
 ### Team Code Repos
 
-- https://github.com/<your_organisation>/<project_1>
-- https://github.com/<your_organisation>/<project_2>
+- (https://github.com/yu-jeffy/audit.me)[https://github.com/yu-jeffy/audit.me]
+- (https://github.com/yu-jeffy/GreedLlama)[https://github.com/yu-jeffy/GreedLlama]
+- (https://github.com/yu-jeffy/PyArb)[https://github.com/yu-jeffy/PyArb]
+- (https://github.com/yu-jeffy/gpt-btc)[https://github.com/yu-jeffy/gpt-btc]
 
 Please also provide the GitHub accounts of all team members. If they contain no activity, references to projects hosted elsewhere or live are also fine.
 
-- https://github.com/<team_member_1>
-- https://github.com/<team_member_2>
+- (https://github.com/yu-jeffy/)[https://github.com/yu-jeffy/]
+- (https://github.com/MaxHuber88)[https://github.com/MaxHuber88]
+- (https://github.com/tangk01)[https://github.com/tangk01]
 
 ### Team LinkedIn Profiles (if available)
 
-- https://www.linkedin.com/<person_1>
-- https://www.linkedin.com/<person_2>
+- (https://www.linkedin.com/in/jeffyyu/)[https://www.linkedin.com/in/jeffyyu/]
+- (https://www.linkedin.com/in/max-huber88/)[https://www.linkedin.com/in/max-huber88/]
+- (https://www.linkedin.com/in/tangk01/)[https://www.linkedin.com/in/tangk01/]
 
 
 ## Development Status :open_book:
 
-If you've already started implementing your project or it is part of a larger repository, please provide a link and a description of the code here. In any case, please provide some documentation on the research and other work you have conducted before applying. This could be:
+We have done extensive research on existing work and the feasibility of the system. Here are our findings:
 
-- links to improvement proposals or [RFPs](https://github.com/w3f/Grants-Program/tree/master/docs/RFPs) (requests for proposal),
-- academic publications relevant to the problem,
-- links to your research diary, blog posts, articles, forum discussions or open GitHub issues,
-- references to conversations you might have had related to this project with anyone from the Web3 Foundation,
-- previous interface iterations, such as mock-ups and wireframes.
+To our knowledge, there are currently three publications assessing the efficacy of LLMs for smart contract auto-completion and generation.
+- (https://arxiv.org/abs/2308.02955)[https://arxiv.org/abs/2308.02955]
+
+This publication uses the base model without additional learning, and finds limited success, with security bugs and errors being frequent. We look to address this by providing additional context through our RAG system, which provides GPT-4 examples of accurate code to reference.
+
+- (https://arxiv.org/abs/2311.10388)[https://arxiv.org/abs/2311.10388]
+This publication utilizes in-context learning with a retrieval system, similar to our approach. They focus solely on generating code comments, not on code itself. They find improved efficacy, which is promising as the design is similar to our system. 
+
+However, their design is distinct from ours as they utilize CodeBert to create the embeddings, which has no Rust code in its training data. This makes it incompatible with ink! smart contracts. They also utilize an older model of GPT, GPT-3.5-turbo, which has performed significantly worse than GPT-4 on coding benchmarks. 
+
+We aim to create an alternative system and replicate their efficacy improvements, using an embedding model that supports Rust, an more recent GPT model, and extend functionality beyond code comment generation to smart contract code generation.
+
+- (https://arxiv.org/abs/2309.09826)[https://arxiv.org/abs/2309.09826]
+This publication fine-tunes a GPT-J model on 2 million smart contracts, and tests if performance increases on writing code without security issues. While their methodology involved directly fine-tuning the model and updating the weights, and ours focuses on adding context through retrieval, the underlying concept of providing learning examples to improve performance remains similar. After the original fine-tuning, they find that insecure code was an issue in up to 70% of generations. After additional fine-tuning on vulnerable examples with vulnerability-constrained decoding, they were able to avoid insecure code generation up to 67% of the time. We have taken these results into consideration, and will implement labeled vulnerable examples in our dataset. This allows our system to identify vulnerabilities, and also avoid generation of them in produced code.
+
+In terms of related work, we have performed a study on the efficacy of vulnerability testing through RAG integrated LLMs on Ethereum Solidity smart contracts. In this study, we built a LangChain RAG-LLM pipeline, and created a vectorstore of 830 vulnerable smart contracts for retrieval. Results were promising, showing nearly a twofold increased efficacy compared to (current literature)[https://arxiv.org/abs/2306.12338]. Using this as a proof of concept of RAG-LLM with smart contract data, we look to rebuild the pipeline towards the use case of authoring ink! smart contracts. We will construct a new pipeline from scratch to utilize LlamaIndex, change the data processing and embedding, and implement a much broader ink! smart contract dataset.
+
 
 ## Development Roadmap :nut_and_bolt:
-
-This section should break the development roadmap down into milestones and deliverables. To assist you in defining it, we have created a document with examples for some grant categories [here](../docs/Support%20Docs/grant_guidelines_per_category.md). Since these will be part of the agreement, it helps to describe *the functionality we should expect in as much detail as possible*, plus how we can verify and test that functionality. Whenever milestones are delivered, we refer to this document to ensure that everything has been delivered as expected.
-
-Below we provide an **example roadmap**. In the descriptions, it should be clear how your project is related to Substrate, Kusama or Polkadot. We *recommend* that teams structure their roadmap as 1 milestone ≈ 1 month.
-
-> :exclamation: If any of your deliverables are based on somebody else's work, make sure you work and publish *under the terms of the license* of the respective project and that you **highlight this fact in your milestone documentation** and in the source code if applicable! **Projects that submit other people's work without proper attribution will be immediately terminated.**
 
 ### Overview
 
@@ -134,10 +151,10 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 |  **0b.** | Documentation | Code comments. Documentation for the prototype architecture and the setup process, explaining how a user can run a local instance of the prototype RAG system with our initial data. |
 |  **0c.** | Testing Guide | Unit tests will be provided for the prototype, with a testing guide explaining how to run them. |
 |  **0d.** | Docker | We will include a `Dockerfile` that enables easy deployment and testing of the RAG system. |
-|       1. | Initial Prototype | Development of a basic LlamaIndex RAG system prototype integrated with GPT-4, using sentence embeddings. |
+|       1. | Initial Prototype | Development of a basic LlamaIndex RAG system prototype integrated with `GPT-4`, using sentence embeddings. User can interact with the pipeline through the command line, interfacing with `GPT-4` with fetched documents from `Pinecone`|
 |       2. | Data Collection | Collection of a small set of `ink!` smart contracts for initial embedding and retrieval testing. Smart contracts will be converted from `.rs` files to `JSON`, with identifying metadata. |
 |       3. | Loading and Embedding Pipeline | Pipeline for loading in `ink!` smart contracts as `JSON` files, and generating embeddings to build the initial vector database. |
-|       4. | Vector Database | `Postgres` database, with `pgvector`, will be used to store embeddings from processed `ink!` smart contracts. |
+|       4. | Vector Database | `Pinecone` database will be used to store embeddings from processed `ink!` smart contracts. |
 
 ### Milestone 2 — Smart Contract Dataset, Embeddings for Vector Database
 
@@ -151,9 +168,9 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 |  **0b.** | Documentation | Code comments. Documentation on the process vectorization of newly collected smart contracts and updating the vector database. |
 |  **0c.** | Testing Guide | Unit tests for changes to loading and vectorization. Testing guide included for running these tests. |
 |  **0d.** | Docker | `Dockerfile` updated to reflect any changes in RAG system and data pipeline deployment. |
-|       1. | Data Expansion | Collection, categorization, and metadata tagging of `ink!` smart contracts to complete the dataset. |
-|       2. | Embedding Model | Replace default sentence embedding. Implement a HuggingFace embedding model designated for code processing. Ensure model has substantial Rust code in training/fine-tuning data. |
-|       3. | Vector Database | Update the `postgres` vector database to house the code-based embeddings of the complete dataset. |
+|       1. | Data Expansion | Collection, categorization, and metadata tagging of `ink!` smart contracts to complete the dataset. Rigorous code commentation in the smart contracts to provide semantic context before vectorization. |
+|       2. | Embedding Model | Replace default sentence embedding. Implement OpenAI's `text-embedding-ada-002` model, compatible with natural language and code processing. |
+|       3. | Vector Database | Update the `Pinecone` vector database to house the code-based embeddings of the complete dataset. |
 
 
 ### Milestone 3 — RAG System Integration
@@ -209,25 +226,13 @@ Below we provide an **example roadmap**. In the descriptions, it should be clear
 
 ## Future Plans
 
-Please include here
-
-- how you intend to finance the project's long-term maintenance and development,
-- how you intend to use, enhance, and promote your project in the short term, and
-- the team's long-term plans and intentions in relation to it.
-
-## Referral Program (optional) :moneybag:
-
-You can find more information about the program [here](../README.md#moneybag-referral-program).
-
-- **Referrer:** Name of the Polkadot Ambassador or GitHub account of the Web3 Foundation grantee
-- **Payment Address:** Polkadot/Kusama (USDT/USDC) payment address. Please also specify the currency. (e.g. 0x8920... (USDT))
+- We plan to set aside a significant portion of the grant funding towards ongoing OpenAI API costs and other hosting costs.
+- We will secure additional funding as needed for these ongoing costs if there is a substantial demand on the platform.
+- We intend to deploy for the public to use for all developers.
+- We look to add additional features to the platform, including Solang support and test deployment capabilities.
+- We look to continuously improve the vectorstore, through gathering of more smart contract examples and vulnerability avoidance.
+- We look to improve the vector search, such as through improving semantic relations with specific code comment styles.
 
 ## Additional Information :heavy_plus_sign:
 
-**How did you hear about the Grants Program?** Web3 Foundation Website / Medium / Twitter / Element / Announcement by another team / personal recommendation / etc.
-
-Here you can also add any additional information that you think is relevant to this application but isn't part of it already, such as:
-
-- Work you have already done.
-- If there are any other teams who have already contributed (financially) to the project.
-- Previous grants you may have applied for.
+**How did you hear about the Grants Program?** Web3 Foundation Website
