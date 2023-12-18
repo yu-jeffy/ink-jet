@@ -66,9 +66,6 @@ We are not providing full automation nor replacement for existing developers, th
 
 We are not claiming that this system is without fault. Though the system is aimed at mitigating errors and vulnerabilities, there is a degree of inherent randomness when using LLMs for code generation. We will provide stringent disclaimers and advice to users to rigorously test their code before deployment, and advocate for contract auditing.
 
-We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
-
-
 ### Ecosystem Fit
 
 This project fits into the ecosystem as a developer tool. It is aimed at improving the smart contract development cycle through both bootstrapping, auto-completion, and iterative feedback. 
