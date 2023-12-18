@@ -62,7 +62,7 @@ We are not claiming that this system is without fault. Though the system is aime
 
 ### Ecosystem Fit
 
-This project fits into the ecosystem as a developer tool. It is aimed at improving the smart contract development cycle through both bootstrapping, auto-completion, and iterative feedback. 
+This project fits into the ecosystem as a developer tool. It is aimed at improving the smart contract development cycle through bootstrapping, assisted coding, and iterative feedback. 
 
 The target audience are existing smart contract developers and those looking to start writing smart contracts.
 
