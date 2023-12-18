@@ -18,13 +18,15 @@ This application is *not* in response to an RFP nor a follow-up grant.
 
 **One liner:** Platform for Generative AI Assisted Smart Contract Development with Retrieval Augmented Generation
 
-`Ink!jet` is a platform designed to fine-tune generative AI for the specific intent of improving the development lifecycle of `ink!` smart contracts within the Polkadot ecosystem. Recognizing the technically intricate nature of smart contracts and the high level of expertise they demand, our project aims to simplify these complexities, thereby democratizing the creation process.
+`Ink!jet` is a platform designed to use augmented generative AI with the intent of improving the development lifecycle of `ink!` smart contracts within the Polkadot ecosystem. Recognizing the technically intricate nature of smart contracts and the high level of expertise they demand, our project aims to simplify these complexities, thereby democratizing the creation process.
 
-Existing generative AI have limitations in both the amount of `Rust` and `ink!` code in their training data. Our platform uses a retrieval-augmented generation pipeline with datasets of existing `ink!` smart contracts to bridge this knowledge gap. Our goal is to enhance the productivity of existing developers through bootstrapping and assisted code interation, while simultaneously lowering the barrier of entry for new developers.
+Existing generative AI have limitations in both the amount of `Rust` and `ink!` code in their training data. Our platform uses a retrieval-augmented generation pipeline with datasets of existing `ink!` smart contracts to bridge this knowledge gap. Injecting vectorstore retrieved code into prompts, this system utilizes in-context learning to improve response quality. Our goal is to enhance the productivity of existing developers through bootstrapping and assisted code interation, while simultaneously lowering the barrier of entry for new developers.
 
-Our team's motivation for the project is twofold. First, we are supporters of decentralized technology and its potential to redefine the digital landscape. We believe that the future of blockchain depends on cross-chain interoperability, which places Polkadot at the center of this emerging need. Second, we are deeply intrigued by the potential of generative AI in software engineering. Our aim is to push the boundaries of what these AI models can achieve in novel contexts, such as the `ink!` programming language, and to explore solutions that empower developers to build the decentralized ecosystem. 
+Our team's motivation for the project is twofold. First, we are supporters of decentralized technology and its potential to redefine the digital landscape. We believe that the future of blockchain depends on cross-chain interoperability, which places Polkadot at the center of this emerging need. Second, we are deeply intrigued by the potential of generative AI in software engineering. Our aim is to push the boundaries of what these AI models can achieve in novel contexts, such as the `ink!` programming language, and to explore solutions that empower developers to build within the decentralized ecosystem.
 
 ### Project Details
+
+![ui-mockup](https://drive.google.com/file/d/1PZhbU7QtjhF0U0kBUdHIqiZhYidEaBh3/view?usp=sharing)
 
 We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
