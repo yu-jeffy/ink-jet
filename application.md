@@ -1,14 +1,8 @@
 # ink!jet
 
-> This document will be part of the terms and conditions of your agreement and, therefore, needs to contain all the required information about the project. Don't remove any of the mandatory parts presented in bold letters or as headlines (except for the title)! Lines starting with a `>` (such as this one) should be removed. Please use markdown instead of HTML (e.g., `![](image.png)` instead of `<img>`).
->
-> See the [Grants Program Process](https://github.com/w3f/Grants-Program/#pencil-process) on how to submit a proposal.
-
 - **Team Name:** Parallel Polis
-- **Payment Address:** In the case of fiat payment, please share your bank account privately with grants@web3.foundation via your contact email (see below) and enter the date when you shared the information with us (e.g. Fiat 24.12.1971, 11:59) here. Otherwise, provide the Polkadot (for USDC & USDT) payment address. Please also specify the currency. (e.g. 0x8920... (USDC))
+- **Payment Address:** Fiat USD 17.12.2023, 20:14 PST
 - **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 2
-
-> :exclamation: *The combination of your GitHub account submitting the application and the payment address above will be your unique identifier during the program. Please keep them safe.*
 
 ## Project Overview :page_facing_up:
 
@@ -135,9 +129,9 @@ Kevin Tang: Full stack engineer with primary experience in JavaScript and React.
 
 ## Development Status :open_book:
 
-We have done extensive research on existing work and the overall feasibility of the project. Here are our findings:
+We have conducted extensive research on existing work and the overall feasibility of the project. Here are our findings:
 
-To our knowledge, there are currently three publications assessing the efficacy of LLMs for smart contract auto-completion and generation.
+To our knowledge at this time, there are currently three publications assessing the efficacy of LLMs for smart contract auto-completion and generation.
 - (https://arxiv.org/abs/2308.02955)[https://arxiv.org/abs/2308.02955]
 
 This publication uses the base model without additional learning, and finds limited success, with security bugs and errors being frequent. We look to address this by providing additional context to prompts through our RAG system, which allows GPT-4 to perform in-context learning.
@@ -250,11 +244,11 @@ In terms of related work, we have (ongoing work)[https://github.com/yu-jeffy/aud
 ## Future Plans
 
 - We plan to set aside a significant portion of the grant funding towards ongoing OpenAI API costs and other hosting costs.
-- We will secure additional funding as needed for these ongoing costs if there is a substantial demand on the platform.
-- We intend to deploy for the public to use for all developers.
-- We look to add additional features to the platform, including Solang support and test deployment capabilities.
+- We will secure additional funding as needed for these ongoing costs if there is substantial demand on the platform.
+- We intend to maintain the platform while it is deployed, fixing any bugs or issues users find.
+- We look to add additional features to the platform, including Solang support and contract deployment testing capabilities.
 - We look to continuously improve the vectorstore, through gathering of more smart contract examples and vulnerability avoidance.
-- We look to improve the vector search, such as through improving semantic relations with specific code comment styles.
+- We look to improve the vector search, such as optimizing semantic relations with code annotations in specific formats.
 
 ## Additional Information :heavy_plus_sign:
 
