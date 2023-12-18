@@ -38,7 +38,7 @@ Users are provided parameters to adjust with their prompts, and can modify the t
 
 #### Data Model / Architecture
 
-![architecture](LINK)
+![architecture](https://jyu.llc/inkjet_arch.png)
 
 #### Stack
 
