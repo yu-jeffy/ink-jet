@@ -26,7 +26,38 @@ Our team's motivation for the project is twofold. First, we are supporters of de
 
 ### Project Details
 
+## UI Mockup:
 ![ui-mockup](https://jyu.llc/inkjet_mockup.png)
+
+## Data Model / Architecture
+
+
+
+## Stack
+
+We will be using the following technologies:
+- Python for RAG-LLM pipeline
+ - LlamaIndex and LangChain libraries for data loading, processing, embedding
+ - LlamaIndex and LangChain libraries for vectorstore retrieval and LLM interaction with retrieval results
+- Pinecone for Vectorstore
+- OpenAI text-embedding-ada-002 Model for Embeddings
+- OpenAI for LLM (GPT-4-32k, GPT-4-1106-preview)
+- ink!/Rust for Smart Contracts
+- React.js for Front-End Application
+- Docker for Containerization
+- Vercel for Hosting
+
+## Relevant Work
+
+Please see Development Status section.
+
+## What this project is NOT
+
+We are not providing a for-profit product, and all usage will be free to any developers. The system and datasets will also be public, so developers can choose to host their own version of the system, with modifications if they please.
+
+We are not providing full automation nor replacement for existing developers, this tool is designed to enhance the developement cycle and increase efficiency.
+
+We are not claiming that this system is without fault. Though the system is aimed at mitigating errors and vulnerabilities, there is a degree of inherent randomness when using LLMs for code generation. We will provide stringent disclaimers and advise to users to rigorously test their code before deployment, and advocate for contract auditing.
 
 We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
@@ -79,9 +110,9 @@ Kevin Tang
 - **Registered Address:** 656 W Nopal Ave Mesa, Arizona 85210
 - **Registered Legal Entity:** Parallel Polis
 
-### Team's experience
+### Team's Experience
 
-We are a research collective focusing on areas in blockchain, machine learning, and artificial intelligence. We have conducted open source research on blockchain network topographies, smart contract auditing, and augmented LLM use cases.
+We are a research collective conducting open source research on areas in blockchain, machine learning, artificial intelligence, and general software engineering.
 
 Our team has an academic background in computer science, and work experience in blockchain development, machine learning, and full stack development. We are looking to bring our skills towards a project that can improve accessibility of the Polkadot developer ecosystem.
 
@@ -98,13 +129,13 @@ Kevin Tang: Full stack engineer with primary experience in JavaScript and React.
 - (https://github.com/yu-jeffy/PyArb)[https://github.com/yu-jeffy/PyArb]
 - (https://github.com/yu-jeffy/gpt-btc)[https://github.com/yu-jeffy/gpt-btc]
 
-Please also provide the GitHub accounts of all team members. If they contain no activity, references to projects hosted elsewhere or live are also fine.
+## GitHub accounts of all team members
 
 - (https://github.com/yu-jeffy/)[https://github.com/yu-jeffy/]
 - (https://github.com/MaxHuber88)[https://github.com/MaxHuber88]
 - (https://github.com/tangk01)[https://github.com/tangk01]
 
-### Team LinkedIn Profiles (if available)
+### Team LinkedIn Profiles
 
 - (https://www.linkedin.com/in/jeffyyu/)[https://www.linkedin.com/in/jeffyyu/]
 - (https://www.linkedin.com/in/max-huber88/)[https://www.linkedin.com/in/max-huber88/]
@@ -130,7 +161,7 @@ We aim to create an alternative system and replicate their efficacy improvements
 - (https://arxiv.org/abs/2309.09826)[https://arxiv.org/abs/2309.09826]
 This publication fine-tunes a GPT-J model on 2 million smart contracts, and tests if performance increases on writing code without security issues. While their methodology involved directly fine-tuning the model and updating the weights, and ours focuses on adding context through retrieval, the underlying concept of providing learning examples to improve performance remains similar. After the original fine-tuning, they find that insecure code was an issue in up to 70% of generations. After additional fine-tuning on vulnerable examples with vulnerability-constrained decoding, they were able to avoid insecure code generation up to 67% of the time. We have taken these results into consideration, and will implement labeled vulnerable examples in our dataset. This allows our system to identify vulnerabilities, and also avoid generation of them in produced code.
 
-In terms of related work, we have performed a study on the efficacy of vulnerability testing through RAG integrated LLMs on Ethereum Solidity smart contracts. In this study, we built a LangChain RAG-LLM pipeline, and created a vectorstore of 830 vulnerable smart contracts for retrieval. Results were promising, showing nearly a twofold increased efficacy compared to (current literature)[https://arxiv.org/abs/2306.12338]. Using this as a proof of concept of RAG-LLM with smart contract data, we look to rebuild the pipeline towards the use case of authoring ink! smart contracts. We will construct a new pipeline from scratch to utilize LlamaIndex, change the data processing and embedding, and implement a much broader ink! smart contract dataset.
+In terms of related work, we have (previous work)[https://github.com/yu-jeffy/audit.me] studying the efficacy of vulnerability testing through RAG integrated LLMs on Ethereum Solidity smart contracts. In this study, we built a LangChain RAG-LLM pipeline, and created a vectorstore of 830 vulnerable smart contracts for retrieval. Results were promising, showing a 1.5x increased efficacy compared to (current literature)[https://arxiv.org/abs/2306.12338]. Using this as a proof of concept of RAG-LLM with smart contract data, we look to rebuild the pipeline towards the use case of authoring ink! smart contracts. We will construct a new pipeline from scratch to utilize LlamaIndex, change the data processing and embedding, and implement a much broader ink! smart contract dataset.
 
 
 ## Development Roadmap :nut_and_bolt:
