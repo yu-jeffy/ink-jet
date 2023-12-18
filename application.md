@@ -186,7 +186,7 @@ In terms of related work, we have [ongoing work](https://github.com/yu-jeffy/aud
 |  Number  | Deliverable | Specification |
 | -------: | ----------- | ------------- |
 |  **0a.** | License | Open-sourced under Apache 2.0. |
-|  **0b.** | Documentation | Code comments. Documentation on the process vectorization of newly collected smart contracts and updating the vector database. |
+|  **0b.** | Documentation | Code comments. Documentation on the vectorization of newly collected smart contracts and updating the vector database. |
 |  **0c.** | Testing Guide | Unit tests for changes to loading and vectorization. Testing guide included for running these tests. |
 |  **0d.** | Docker | `Dockerfile` updated to reflect any changes in RAG system and data pipeline deployment. |
 |       1. | Data Expansion | Collection, categorization, and metadata tagging of `ink!` smart contracts to complete the dataset. Rigorous code commentation in the smart contracts to provide semantic context before vectorization. |
@@ -204,10 +204,10 @@ In terms of related work, we have [ongoing work](https://github.com/yu-jeffy/aud
 | -------: | ----------- | ------------- |
 |  **0a.** | License | Open-sourced under Apache 2.0. |
 |  **0b.** | Documentation | Code comments. Documentation provided for the integration process, and usage instructions provided for the updated RAG system. |
-|  **0c.** | Testing Guide | Unit tests updated to reflect changes in RAG system. Guide for testing the updated RAG system with various queries included. |
+|  **0c.** | Testing Guide | Unit tests updated to reflect changes in RAG system. Guide for testing the updated RAG system. |
 |  **0d.** | Docker | `Dockerfile` updated with any changes in deployment. |
-|       1. | RAG Integration | Integration of the new dataset and vector database with the prototype RAG system for improved retrieval. |
-|       2. | Query Handling | Updated query parsing and processing using new embedding model to improve smart contract code retrieval. |
+|       1. | RAG Integration | Integration of the new dataset and vector database with the prototype RAG system for improved retrieval. Modifiable parameters for queries, including temperature, top-k documents in retrieval, and token context size. |
+|       2. | Query Handling | Updated query parsing and processing using new embedding model to improve smart contract code retrieval. Prompt rewriting of plaintext in user request to improve semantic search. |
 |       3. | System Testing | Testing of RAG retrieval functionality with the updated dataset. Testing of output quality of RAG system. |
 
 ### Milestone 4 — UI/UX Development and Front-End Implementation
@@ -239,7 +239,7 @@ In terms of related work, we have [ongoing work](https://github.com/yu-jeffy/aud
 |  **0c.** | Testing Guide | Updated testing guide that includes all features of the application. |
 |  **0d.** | Docker | Finalized `Dockerfile` for the complete system with all features included. |
 |  **0e.** | Article | We will publish an **article** that showcases the development process, application use cases, application demo, and usage of the grant throughout the project cycle. |
-|       1. | UI/UX Updates | Updated `React.js` to serve additional features in the application. |
+|       1. | UI/UX Updates | Updated `React.js` components to serve additional features in the application. |
 |       2. | Templates | Development of a template system for users to easily bootstrap building smart contracts. User can pick from a list of common use cases, and be provided a template smart contract to start with. |
 |       3. | Smart Contract Analysis | A feature to break down smart contracts into chunks, scanning each for functionality and errors, and suggest improvements or fixes. Contract will be broken down into parts, such as its functions, and each will be analyzed by the LLM. |
 |       4. | Final Application Testing | System-wide testing of all features, ensuring full integration and operational stability. |
