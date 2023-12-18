@@ -105,7 +105,7 @@ Our team has an academic background in computer science, and work experience in 
 
 Jeffy Yu - Former full stack blockchain engineer at Paystand, a B2B payments company anchoring invoice records on the Ethereum blockchain. A member of the R&D team at Paystand, built a payment network in Rust supported by the Lightning Network to migrate invoicing towards decentralized solutions. Former full stack engineer at Lirn, a decentralized learning platform utilizing ERC-1155 tokens as educational certificates. Research Scientist at Parallel Polis, performing open-sourced technical studies on blockchain and artificial intelligence. Recently published work on Lightning Network topographies for closed payment systems, accessible [here](https://scholar.google.com/citations?user=zy7ZWqYAAAAJ&hl=en).
 
-Maximilian Huber: Former full stack engineer at CollX Inc., experienced in building RAG retrieval systems and deploying generative AI for specific use cases.
+Maximilian Huber: Former full stack engineer at CollX Inc., experienced in building RAG retrieval systems and deploying generative AI for specific use cases. Experience building user-facing LLM-enabled applications.
 
 Kevin Tang: Full stack engineer with primary experience in JavaScript and React.js, as well as experience in iOS-development at Priceline.com. Experience developing and maintaining systems in active deployment.
 
