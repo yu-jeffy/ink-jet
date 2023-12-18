@@ -81,7 +81,9 @@ To the best of our knowledge, there are no existing projects that are similar at
 ### Team members
 
 Jeffy Yu
+
 Maximilian Huber
+
 Kevin Tang
 
 ### Contact
