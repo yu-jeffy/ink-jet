@@ -26,7 +26,7 @@ Our team's motivation for the project is twofold. First, we are supporters of de
 
 ### Project Details
 
-![ui-mockup](https://drive.google.com/file/d/1PZhbU7QtjhF0U0kBUdHIqiZhYidEaBh3/view?usp=sharing)
+![ui-mockup](https://jyu.llc/inkjet_mockup.png)
 
 We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
