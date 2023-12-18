@@ -134,21 +134,21 @@ Kevin Tang: Full stack engineer with primary experience in JavaScript and React.
 We have conducted extensive research on existing work and the overall feasibility of the project. Here are our findings:
 
 To our knowledge at this time, there are currently three publications assessing the efficacy of LLMs for smart contract auto-completion and generation.
-- (https://arxiv.org/abs/2308.02955)[https://arxiv.org/abs/2308.02955]
+- [https://arxiv.org/abs/2308.02955](https://arxiv.org/abs/2308.02955)
 
 This publication uses the base model without additional learning, and finds limited success, with security bugs and errors being frequent. We look to address this by providing additional context to prompts through our RAG system, which allows GPT-4 to perform in-context learning.
 
-- (https://arxiv.org/abs/2311.10388)[https://arxiv.org/abs/2311.10388]
+- [https://arxiv.org/abs/2311.10388](https://arxiv.org/abs/2311.10388)
 This publication utilizes in-context learning with a retrieval system, similar to our approach. They focus solely on generating code comments, not on code itself. They find improved efficacy, which is promising as the design is similar to our system. 
 
 However, their design is distinct from ours as they utilize CodeBert to create the embeddings, which has no Rust code in its training data. This makes it incompatible with ink! smart contracts. They also utilize an older model of GPT, GPT-3.5-turbo, which has been significantly outperformed by GPT-4 on coding benchmarks.
 
 We aim to create an alternative system and while replicating their efficacy improvements, using an embedding model that supports Rust and a more recent GPT model, and extend functionality beyond code comment generation to smart contract code generation.
 
-- (https://arxiv.org/abs/2309.09826)[https://arxiv.org/abs/2309.09826]
+- [https://arxiv.org/abs/2309.09826](https://arxiv.org/abs/2309.09826)
 This publication fine-tunes a GPT-J model on 2 million smart contracts, and tests if performance increases on writing code without security issues. While their methodology involved directly fine-tuning the model and updating the weights, and ours focuses on adding context through retrieval, the underlying concept of providing learning examples to improve performance remains similar. After the original fine-tuning, they find that insecure code was an issue in up to 70% of generations. After additional fine-tuning on vulnerable examples with vulnerability-constrained decoding, they were able to avoid insecure code generation up to 67% of the time. We have taken these findings into consideration, and will implement labeled vulnerable examples in our dataset. This allows our system to identify vulnerabilities if present in the user's smart contract, and also avoid generation of them in code responses.
 
-In terms of related work, we have (ongoing work)[https://github.com/yu-jeffy/audit.me] studying the efficacy of vulnerability testing through RAG integrated LLMs on Ethereum Solidity smart contracts. In this study, we built a LangChain RAG-LLM pipeline, and created a vectorstore of 830 vulnerable Solidity smart contracts for retrieval. Results were promising, showing a 1.5x increased efficacy compared to (current literature)[https://arxiv.org/abs/2306.12338]. Using this as a proof of concept of RAG-LLM with smart contract data, we look to rebuild the pipeline towards the use case of authoring ink! smart contracts. We will construct a new pipeline from scratch, utilize LlamaIndex alongside LangChain, change the data processing and embedding methodology, and implement a much broader ink! smart contract dataset.
+In terms of related work, we have [ongoing work](https://github.com/yu-jeffy/audit.me) studying the efficacy of vulnerability testing through RAG integrated LLMs on Ethereum Solidity smart contracts. In this study, we built a LangChain RAG-LLM pipeline, and created a vectorstore of 830 vulnerable Solidity smart contracts for retrieval. Results were promising, showing a 1.5x increased efficacy compared to [current literature](https://arxiv.org/abs/2306.12338). Using this as a proof of concept of RAG-LLM with smart contract data, we look to rebuild the pipeline towards the use case of authoring ink! smart contracts. We will construct a new pipeline from scratch, utilize LlamaIndex alongside LangChain, change the data processing and embedding methodology, and implement a much broader ink! smart contract dataset.
 
 ## Development Roadmap :nut_and_bolt:
 
