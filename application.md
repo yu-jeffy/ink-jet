@@ -72,7 +72,7 @@ Rust is a low level language, requiring manual management of memory and pointers
 
 Acknowledging these technical barriers, our tool aims to facilitate an easier transition towards developing in ink! through guided development. Those who already know Rust can easily step into ink! development, and have the differences in syntax explained. Those who already know ink! will be able to save time writing boilerplate and refining work-in-progress contracts. Users are continuously provided feedback on their code, which saves time spent searching documentation or posting on forums. 
 
-Current LLMs provided limited assistance at this point in time due to the scarcity of Rust and specifically ink! code in their training data, and we aim to bridge this gap through our approach.
+At this point in time, current LLMs provide limited assistance due to the scarcity of Rust and specifically ink! code in their training data, and we aim to bridge this gap through our approach.
 
 To the best of our knowledge, there are no existing projects that are similar at this time.
 
