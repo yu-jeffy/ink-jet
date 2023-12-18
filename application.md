@@ -64,7 +64,7 @@ We are not providing a for-profit product, and all usage will be free to any dev
 
 We are not providing full automation nor replacement for existing developers, this tool is designed to enhance the developement cycle and increase efficiency.
 
-We are not claiming that this system is without fault. Though the system is aimed at mitigating errors and vulnerabilities, there is a degree of inherent randomness when using LLMs for code generation. We will provide stringent disclaimers and advise to users to rigorously test their code before deployment, and advocate for contract auditing.
+We are not claiming that this system is without fault. Though the system is aimed at mitigating errors and vulnerabilities, there is a degree of inherent randomness when using LLMs for code generation. We will provide stringent disclaimers and advice to users to rigorously test their code before deployment, and advocate for contract auditing.
 
 We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
