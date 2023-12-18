@@ -84,8 +84,6 @@ To the best of our knowledge, there are no existing projects that are similar at
 
 ## Team :busts_in_silhouette:
 
-> Please note that the data provided in this section is for administrative and informational purposes only. All beneficiaries of a grant must also be listed in the KYC/KYB process during the application phase. See our [FAQ](https://grants.web3.foundation/docs/faq#what-is-kyckyb-and-why-do-i-have-to-provide-this-data) for more info.
-
 ### Team members
 
 Jeffy Yu
@@ -109,7 +107,7 @@ We are a research collective conducting open source research on areas in blockch
 
 Our team has an academic background in computer science, and work experience in blockchain development, machine learning, and full stack development. We are looking to bring our skills towards a project that can improve accessibility of the Polkadot developer ecosystem.
 
-Jeffy Yu - Former full stack blockchain engineer at Paystand, a B2B payments company anchoring invoice records on the Ethereum blockchain. A member of the R&D team at Paystand, built a payment network in Rust supported by the Lightning Network to migrate invoicing towards decentralized solutions. Former full stack engineer at Lirn, a decentralized learning platform utilizing ERC-1155 tokens as educational certificates. Research Scientist at Parallel Polis, performing open-sourced technical studies on blockchain and artificial intelligence. Publications can be found [here](https://scholar.google.com/citations?user=zy7ZWqYAAAAJ&hl=en).
+Jeffy Yu - Former full stack blockchain engineer at Paystand, a B2B payments company anchoring invoice records on the Ethereum blockchain. A member of the R&D team at Paystand, built a payment network in Rust supported by the Lightning Network to migrate invoicing towards decentralized solutions. Former full stack engineer at Lirn, a decentralized learning platform utilizing ERC-1155 tokens as educational certificates. Research Scientist at Parallel Polis, performing open-sourced technical studies on blockchain and artificial intelligence. Recently published work on Lightning Network topographies for closed payment systems, accessible [here](https://scholar.google.com/citations?user=zy7ZWqYAAAAJ&hl=en).
 
 Maximilian Huber: Former full stack engineer at CollX Inc., experienced in building RAG retrieval systems and deploying generative AI for specific use cases.
 
@@ -137,25 +135,24 @@ Kevin Tang: Full stack engineer with primary experience in JavaScript and React.
 
 ## Development Status :open_book:
 
-We have done extensive research on existing work and the feasibility of the system. Here are our findings:
+We have done extensive research on existing work and the overall feasibility of the project. Here are our findings:
 
 To our knowledge, there are currently three publications assessing the efficacy of LLMs for smart contract auto-completion and generation.
 - (https://arxiv.org/abs/2308.02955)[https://arxiv.org/abs/2308.02955]
 
-This publication uses the base model without additional learning, and finds limited success, with security bugs and errors being frequent. We look to address this by providing additional context through our RAG system, which provides GPT-4 examples of accurate code to reference.
+This publication uses the base model without additional learning, and finds limited success, with security bugs and errors being frequent. We look to address this by providing additional context to prompts through our RAG system, which allows GPT-4 to perform in-context learning.
 
 - (https://arxiv.org/abs/2311.10388)[https://arxiv.org/abs/2311.10388]
 This publication utilizes in-context learning with a retrieval system, similar to our approach. They focus solely on generating code comments, not on code itself. They find improved efficacy, which is promising as the design is similar to our system. 
 
-However, their design is distinct from ours as they utilize CodeBert to create the embeddings, which has no Rust code in its training data. This makes it incompatible with ink! smart contracts. They also utilize an older model of GPT, GPT-3.5-turbo, which has performed significantly worse than GPT-4 on coding benchmarks. 
+However, their design is distinct from ours as they utilize CodeBert to create the embeddings, which has no Rust code in its training data. This makes it incompatible with ink! smart contracts. They also utilize an older model of GPT, GPT-3.5-turbo, which has been significantly outperformed by GPT-4 on coding benchmarks.
 
-We aim to create an alternative system and replicate their efficacy improvements, using an embedding model that supports Rust, an more recent GPT model, and extend functionality beyond code comment generation to smart contract code generation.
+We aim to create an alternative system and while replicating their efficacy improvements, using an embedding model that supports Rust and a more recent GPT model, and extend functionality beyond code comment generation to smart contract code generation.
 
 - (https://arxiv.org/abs/2309.09826)[https://arxiv.org/abs/2309.09826]
-This publication fine-tunes a GPT-J model on 2 million smart contracts, and tests if performance increases on writing code without security issues. While their methodology involved directly fine-tuning the model and updating the weights, and ours focuses on adding context through retrieval, the underlying concept of providing learning examples to improve performance remains similar. After the original fine-tuning, they find that insecure code was an issue in up to 70% of generations. After additional fine-tuning on vulnerable examples with vulnerability-constrained decoding, they were able to avoid insecure code generation up to 67% of the time. We have taken these results into consideration, and will implement labeled vulnerable examples in our dataset. This allows our system to identify vulnerabilities, and also avoid generation of them in produced code.
+This publication fine-tunes a GPT-J model on 2 million smart contracts, and tests if performance increases on writing code without security issues. While their methodology involved directly fine-tuning the model and updating the weights, and ours focuses on adding context through retrieval, the underlying concept of providing learning examples to improve performance remains similar. After the original fine-tuning, they find that insecure code was an issue in up to 70% of generations. After additional fine-tuning on vulnerable examples with vulnerability-constrained decoding, they were able to avoid insecure code generation up to 67% of the time. We have taken these findings into consideration, and will implement labeled vulnerable examples in our dataset. This allows our system to identify vulnerabilities if present in the user's smart contract, and also avoid generation of them in code responses.
 
-In terms of related work, we have (previous work)[https://github.com/yu-jeffy/audit.me] studying the efficacy of vulnerability testing through RAG integrated LLMs on Ethereum Solidity smart contracts. In this study, we built a LangChain RAG-LLM pipeline, and created a vectorstore of 830 vulnerable smart contracts for retrieval. Results were promising, showing a 1.5x increased efficacy compared to (current literature)[https://arxiv.org/abs/2306.12338]. Using this as a proof of concept of RAG-LLM with smart contract data, we look to rebuild the pipeline towards the use case of authoring ink! smart contracts. We will construct a new pipeline from scratch to utilize LlamaIndex, change the data processing and embedding, and implement a much broader ink! smart contract dataset.
-
+In terms of related work, we have (ongoing work)[https://github.com/yu-jeffy/audit.me] studying the efficacy of vulnerability testing through RAG integrated LLMs on Ethereum Solidity smart contracts. In this study, we built a LangChain RAG-LLM pipeline, and created a vectorstore of 830 vulnerable Solidity smart contracts for retrieval. Results were promising, showing a 1.5x increased efficacy compared to (current literature)[https://arxiv.org/abs/2306.12338]. Using this as a proof of concept of RAG-LLM with smart contract data, we look to rebuild the pipeline towards the use case of authoring ink! smart contracts. We will construct a new pipeline from scratch, utilize LlamaIndex alongside LangChain, change the data processing and embedding methodology, and implement a much broader ink! smart contract dataset.
 
 ## Development Roadmap :nut_and_bolt:
 
