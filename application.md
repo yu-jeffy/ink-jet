@@ -111,22 +111,22 @@ Kevin Tang: Full stack engineer with primary experience in JavaScript and React.
 
 ### Team Code Repos
 
-- (https://github.com/yu-jeffy/audit.me)[https://github.com/yu-jeffy/audit.me]
-- (https://github.com/yu-jeffy/GreedLlama)[https://github.com/yu-jeffy/GreedLlama]
-- (https://github.com/yu-jeffy/PyArb)[https://github.com/yu-jeffy/PyArb]
-- (https://github.com/yu-jeffy/gpt-btc)[https://github.com/yu-jeffy/gpt-btc]
+- [https://github.com/yu-jeffy/audit.me](https://github.com/yu-jeffy/audit.me)
+- [https://github.com/yu-jeffy/GreedLlama](https://github.com/yu-jeffy/GreedLlama)
+- [https://github.com/yu-jeffy/PyArb](https://github.com/yu-jeffy/PyArb)
+- [https://github.com/yu-jeffy/gpt-btc](https://github.com/yu-jeffy/gpt-btc)
 
 ### Team Github Accounts
 
-- (https://github.com/yu-jeffy/)[https://github.com/yu-jeffy/]
-- (https://github.com/MaxHuber88)[https://github.com/MaxHuber88]
-- (https://github.com/tangk01)[https://github.com/tangk01]
+- [https://github.com/yu-jeffy/](https://github.com/yu-jeffy/)
+- [https://github.com/MaxHuber88](https://github.com/MaxHuber88)
+- [https://github.com/tangk01](https://github.com/tangk01)
 
 ### Team LinkedIn Profiles
 
-- (https://www.linkedin.com/in/jeffyyu/)[https://www.linkedin.com/in/jeffyyu/]
-- (https://www.linkedin.com/in/max-huber88/)[https://www.linkedin.com/in/max-huber88/]
-- (https://www.linkedin.com/in/tangk01/)[https://www.linkedin.com/in/tangk01/]
+- [https://www.linkedin.com/in/jeffyyu/](https://www.linkedin.com/in/jeffyyu/)
+- [https://www.linkedin.com/in/max-huber88/](https://www.linkedin.com/in/max-huber88/)
+- [https://www.linkedin.com/in/tangk01/](https://www.linkedin.com/in/tangk01/)
 
 
 ## Development Status :open_book:
