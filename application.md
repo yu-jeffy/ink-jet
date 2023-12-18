@@ -26,14 +26,14 @@ Our team's motivation for the project is twofold. First, we are supporters of de
 
 ### Project Details
 
-## UI Mockup:
+#### UI Mockup:
 ![ui-mockup](https://jyu.llc/inkjet_mockup.png)
 
-## Data Model / Architecture
+#### Data Model / Architecture
 
 
 
-## Stack
+#### Stack
 
 We will be using the following technologies:
 - Python for RAG-LLM pipeline
@@ -47,11 +47,11 @@ We will be using the following technologies:
 - Docker for Containerization
 - Vercel for Hosting
 
-## Relevant Work
+#### Relevant Work
 
 Please see Development Status section.
 
-## What this project is NOT
+#### What this project is NOT
 
 We are not providing a for-profit product, and all usage will be free to any developers. The system and datasets will also be public, so developers can choose to host their own version of the system, with modifications if they please.
 
@@ -129,7 +129,7 @@ Kevin Tang: Full stack engineer with primary experience in JavaScript and React.
 - (https://github.com/yu-jeffy/PyArb)[https://github.com/yu-jeffy/PyArb]
 - (https://github.com/yu-jeffy/gpt-btc)[https://github.com/yu-jeffy/gpt-btc]
 
-## GitHub accounts of all team members
+#### GitHub accounts of all team members
 
 - (https://github.com/yu-jeffy/)[https://github.com/yu-jeffy/]
 - (https://github.com/MaxHuber88)[https://github.com/MaxHuber88]
