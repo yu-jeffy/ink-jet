@@ -27,11 +27,18 @@ Our team's motivation for the project is twofold. First, we are supporters of de
 ### Project Details
 
 #### UI Mockup:
+
+We are opting for a simplistic UI for ease of use. The tool will be a single-page application, where the right side of the page is an in-browser IDE for the `ink!` smart contract being worked on. The right side is a Chat History where the user can interact with the LLM. Code generations in responses will be automatically populated in the left IDE. 
+
+We provide a dropdown menu of code templates to choose from. The History button will keep a edit history of the smart contract if the user needs to revert to a previous version. The Analyze button will break the code down into chunks (such as its individual functions) and provide feedback for each chunk. The feedback will replace the Chat History, and can be closed once it is read to resume editing.
+
+Users are provided parameters to adjust with their prompts, and can modify the temperature and number of retrieval documents from the vectorstore.
+
 ![ui-mockup](https://jyu.llc/inkjet_mockup.png)
 
 #### Data Model / Architecture
 
-
+![architecture](LINK)
 
 #### Stack
 
@@ -61,33 +68,22 @@ We are not claiming that this system is without fault. Though the system is aime
 
 We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
 
-- Mockups/designs of any UI components
-- Data models / API specifications of the core functionality
-- An overview of the technology stack to be used
-- Documentation of core components, protocols, architecture, etc. to be deployed
-- PoC/MVP or other relevant prior work or research on the topic
-- What your project is *not* or will *not* provide or implement
-  - This is a place for you to manage expectations and clarify any limitations that might not be obvious
-
-
-Things that shouldn’t be part of the application (see also our [FAQ](../docs/faq.md)):
-
-- The (future) tokenomics of your project
-- For non-infrastructure projects—deployment and hosting costs, maintenance or audits
-- Business-oriented activities (marketing, business planning), events or outreach
 
 ### Ecosystem Fit
 
-Help us locate your project in the Polkadot/Substrate/Kusama landscape and what problems it tries to solve by answering each of these questions:
+This project fits into the ecosystem as a developer tool. It is aimed at improving the smart contract development cycle through both bootstrapping, auto-completion, and iterative feedback. 
 
-- Where and how does your project fit into the ecosystem?
-- Who is your target audience (parachain/dapp/wallet/UI developers, designers, your own user base, some dapp's userbase, yourself)?
-- What need(s) does your project meet?
-- How did you identify these needs? Please provide evidence in the form of (scientific) articles, forum discussions, case studies, or raw data.
-- Are there any other projects similar to yours in the Substrate / Polkadot / Kusama ecosystem?
-  - If so, how is your project different? Please identify and assess any projects addressing the same need and explain how your project is distinct. Feel free to include applicable research data, statistics, or metrics.
-  - If not, please indicate why such a project might not have been possible, successful, or attempted. 
-- Are there any projects similar to yours in related ecosystems? 
+The target audience are existing smart contract developers and those looking to start writing smart contracts.
+
+As the programming language ink! is built on top of Rust, there exists some barriers of entry, for both Rust and ink!. 
+
+Rust is a low level language, requiring manual management of memory and pointers. While the language has steady increases in adoption and high ratings, it remains challenging for those coming from other languages and especially new developers. In addition to this complexity, the ink! programming language introduces a handful of macros and does not rely on the standard `std` library. Moreover, managing environment variables are done with a different crate and the code is compiled into WASM instead of machine code.
+
+Acknowledging these technical barriers, our tool aims to facilitate an easier transition towards developing in ink! through guided development. Those who already know Rust can easily step into ink! development, and have the differences in syntax explained. Those who already know ink! will be able to save time writing boilerplate and refining work-in-progress contracts. Users are continuously provided feedback on their code, which saves time spent searching documentation or posting on forums. 
+
+Current LLMs provided limited assistance at this point in time due to the scarcity of Rust and specifically ink! code in their training data, and we aim to bridge this gap through our approach.
+
+To the best of our knowledge, there are no existing projects that are similar at this time.
 
 ## Team :busts_in_silhouette:
 
@@ -129,7 +125,7 @@ Kevin Tang: Full stack engineer with primary experience in JavaScript and React.
 - (https://github.com/yu-jeffy/PyArb)[https://github.com/yu-jeffy/PyArb]
 - (https://github.com/yu-jeffy/gpt-btc)[https://github.com/yu-jeffy/gpt-btc]
 
-#### GitHub accounts of all team members
+### Team Github Accounts
 
 - (https://github.com/yu-jeffy/)[https://github.com/yu-jeffy/]
 - (https://github.com/MaxHuber88)[https://github.com/MaxHuber88]
