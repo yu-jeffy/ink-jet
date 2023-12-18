@@ -22,7 +22,7 @@ Our team's motivation for the project is twofold. First, we are supporters of de
 
 #### UI Mockup:
 
-We are opting for a simplistic UI for ease of use. The tool will be a single-page application, where the right side of the page is an in-browser IDE for the `ink!` smart contract being worked on. The right side is a Chat History where the user can interact with the LLM. Code generations in responses will be automatically populated in the left IDE. 
+We are opting for a simplistic UI for ease of use. The tool will be a single-page application, where the left side of the page is an in-browser IDE for the `ink!` smart contract being worked on. The right side is a Chat History where the user can interact with the LLM. Code generations in responses will be automatically populated in the left IDE. 
 
 We provide a dropdown menu of code templates to choose from. The History button will keep a edit history of the smart contract if the user needs to revert to a previous version. The Analyze button will break the code down into chunks (such as its individual functions) and provide feedback for each chunk. The feedback will replace the Chat History, and can be closed once it is read to resume editing.
 
