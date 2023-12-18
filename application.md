@@ -34,7 +34,7 @@ We provide a dropdown menu of code templates to choose from. The History button 
 
 Users are provided parameters to adjust with their prompts, and can modify the temperature and number of retrieval documents from the vectorstore.
 
-![ui-mockup](https://jyu.llc/inkjet_uimockup.png)
+![ui-mockup](https://jyu.llc/inkjet_mockupui.png)
 
 #### Data Model / Architecture
 
