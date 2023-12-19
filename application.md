@@ -36,7 +36,7 @@ Users are provided parameters to adjust with their prompts, and can modify the t
 
 We are using Docker for containerization of the platform. When a user initiates the application, a new Docker image is started, which houses the RAG-LLM pipeline and a Rust environment. When the smart contract is run or scanned with CoinFabrik, the code is sent to the Rust environment and compiled. The result is returned to the user in the web interface. Single user containerization also prevents code interferences between concurrent users.
 
-For running the smart contract itself, the console responses will be returned for the user to see, such as errors. For vulnerability testing, CoinFabrik Scout offer JSON format for their output, which we will retrieve and return to the user.
+For running the smart contract itself, the console responses will be returned for the user to see, such as errors. For vulnerability testing, CoinFabrik Scout offers JSON format for their output, which we will retrieve, parse, and return to the user.
 
 #### Stack
 
@@ -44,11 +44,12 @@ We will be using the following technologies:
 - Python for RAG-LLM pipeline
  - LlamaIndex and LangChain libraries for data loading, processing, embedding
  - LlamaIndex and LangChain libraries for vectorstore retrieval and LLM interaction with retrieval results
-- Pinecone for Vectorstore (with ChromaDB option)
+- Pinecone for Vectorstore
 - OpenAI text-embedding-ada-002 Model for Embeddings
 - OpenAI for LLM (GPT-4-32k, GPT-4-1106-preview)
 - ink!/Rust for Smart Contracts
 - CoinFabrik Scout for Vulnerabiity Detection
+- Monaco Editor for In-Browser IDE
 - React.js for Front-End Application
 - Docker for Containerization
 - Rust for Development Environment within the Container
@@ -197,7 +198,7 @@ In terms of related work, we have [ongoing work](https://github.com/yu-jeffy/aud
 |  **0b.** | Documentation | Code comments. Documentation on the vectorization of newly collected smart contracts and updating the vector database. |
 |  **0c.** | Testing Guide | Unit tests for changes to loading and vectorization. Testing guide included for running these tests. |
 |  **0d.** | Docker | `Dockerfile` updated to reflect any changes in RAG system and data pipeline deployment. |
-|       1. | Data Expansion | Collection, categorization, and metadata tagging of `ink!` smart contracts to complete the dataset. Rigorous code commentation in the smart contracts to provide semantic context before vectorization. |
+|       1. | Data Expansion | Collection and generation, categorization, and metadata tagging of `ink!` smart contracts to complete the dataset. Smart contracts will be locally compiled, tested with CoinFabrik Scout, and deployed to a local or testnet node to ensure functionality. Rigorous code commentation in the smart contracts to provide semantic context before vectorization. |
 |       2. | Embedding Model | Replace default sentence embedding. Implement OpenAI's `text-embedding-ada-002` model, compatible with natural language and code processing. |
 |       3. | Vector Database | Update the `Pinecone` vector database to house the code-based embeddings of the complete dataset. |
 
