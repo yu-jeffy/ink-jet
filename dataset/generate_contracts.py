@@ -53,7 +53,10 @@ def main():
     if result.returncode != 0:
         print(f"Failed to create cargo contract project: {result.stderr}")
         return
-    
+        
+    # TO DO:
+    # generate with gpt here and input result as second parameter in write_to_lib_rs function
+
     write_to_lib_rs(folder_name, rust_code)
     result = build_cargo_contract(folder_name)
     write_result_to_file(folder_name, result)
