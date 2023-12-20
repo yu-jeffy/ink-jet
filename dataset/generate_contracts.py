@@ -1,5 +1,9 @@
 import os
 import subprocess
+import openai
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # For each smart contract
 # 1. Create new Rust contract project (cargo contract new name_number)
@@ -8,16 +12,36 @@ import subprocess
 # 4. Run cargo contract build to compile the smart contract
 # 5. Save terminal output if there are errors, otherwise save a file saying "success"
 
-# Set the folder name
-folder_name = "your_project_name"  # Change this to your desired name
 
-# The Rust code to replace in lib.rs
-rust_code = r'''
-// Your Rust code here
-fn main() {
-    println!("Hello, world!");
-}
-'''
+# set system prompt to prompt_twoexamples.txt
+base_prompt = ""
+with open('prompt_twoexamples.txt', 'r') as file:
+    base_prompt = file.read()
+
+# gpt call
+def generate_smart_contract(prompt):
+    # Create the chat completion
+    response = openai.chat.completions.create(
+        model="gpt-4-1106-preview",
+        messages=[
+            {"role": "system", "content": ""},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.5,
+        max_tokens=3000, # larger token size to fit full smart contract
+    )
+    content = response.choices[0].message.content
+    return content
+
+# Removes ```rust from the beginning and ``` from the end of the string (gpt response).
+def remove_mardown_markers(text):
+    # Check if the string starts with ```rust and ends with ```
+    if text.startswith("```rust") and text.endswith("```"):
+        # Remove ```rust from the beginning (7 characters) and ``` from the end (3 characters)
+        return text[7:-3]
+    else:
+        # Return the original string if it doesn't have the specific markers
+        return text
 
 # Create a new cargo contract project
 def create_cargo_contract_project(folder_name):
@@ -49,21 +73,36 @@ def write_result_to_file(folder_name, result):
 
 # Run the sequence of actions
 def main():
-    result = create_cargo_contract_project(folder_name)
-    if result.returncode != 0:
-        print(f"Failed to create cargo contract project: {result.stderr}")
-        return
-        
-    # TO DO:
-    # generate with gpt here and input result as second parameter in write_to_lib_rs function
+    with open('categories_single_test.txt', 'r') as file:
+        # Iterate over each line
+        for line in file:
+            # Strip newline characters and any leading/trailing whitespace
+            processed_line = line.strip()
+            # inject category into prompt
+            current_system_prompt = base_prompt.replace("{type}", processed_line)
+            # Generate smart contract with GPT
+            contract = generate_smart_contract(current_system_prompt)
+            # Clean up the contract
+            contract_clean = remove_mardown_markers(contract)
 
-    write_to_lib_rs(folder_name, rust_code)
-    result = build_cargo_contract(folder_name)
-    write_result_to_file(folder_name, result)
+            # Create the new project
+            result = create_cargo_contract_project(line)
+            if result.returncode != 0:
+                print(f"Failed to create cargo contract project: {result.stderr}")
+                return
 
-    if result.returncode == 0:
-        print("Cargo contract built successfully.")
-    else:
-        print(f"Cargo contract build failed: {result.stderr}")
+            # Write the smart contract to the lib.rs file
+            write_to_lib_rs(line, contract_clean)
+
+            # Build the cargo contract
+            result = build_cargo_contract(line)
+
+            # Write the build/compile result to a file
+            write_result_to_file(line, result)
+
+            if result.returncode == 0:
+                print("Cargo contract built successfully.")
+            else:
+                print(f"Cargo contract build failed: {result.stderr}")
 
 main()
