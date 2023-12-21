@@ -29,3 +29,10 @@ Afterwards, install Scout with the following command:
 To run Scout on your project, navigate to its root directory and execute the following command:
 
 `cargo scout-audit`
+
+### Additional Steps
+### May need to run:
+
+```rustup component add rust-src --toolchain stable```
+
+```rustup target add wasm32-unknown-unknown --toolchain stable```
