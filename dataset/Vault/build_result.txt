@@ -1,0 +1,241 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m proc-macro2 v1.0.70
+[1m[32m   Compiling[0m unicode-ident v1.0.12
+[1m[36m    Building[0m [                           ] 0/125: unicode-ident, proc-macro2(build.rs)            
+[K[1m[32m   Compiling[0m syn v1.0.109
+[1m[36m    Building[0m [                           ] 1/125: proc-macro2(build.rs), syn(build.rs)            
+[1m[36m    Building[0m [                           ] 2/125: proc-macro2(build), syn(build.rs)               
+[1m[36m    Building[0m [                           ] 3/125: syn(build.rs), proc-macro2                      
+[1m[36m    Building[0m [                           ] 4/125: syn(build), proc-macro2                         
+[K[1m[32m   Compiling[0m equivalent v1.0.1
+[1m[36m    Building[0m [>                          ] 5/125: equivalent, proc-macro2                         
+[K[1m[32m   Compiling[0m hashbrown v0.14.3
+[1m[36m    Building[0m [>                          ] 6/125: hashbrown, proc-macro2                          
+[K[1m[32m   Compiling[0m quote v1.0.33
+[1m[36m    Building[0m [>                          ] 7/125: hashbrown, quote                                
+[K[1m[32m   Compiling[0m indexmap v2.1.0
+[1m[36m    Building[0m [>                          ] 8/125: quote, indexmap                                 
+[1m[36m    Building[0m [>                          ] 9/125: syn, indexmap                                   
+[K[1m[32m   Compiling[0m winnow v0.5.30
+[1m[36m    Building[0m [=>                        ] 10/125: syn, winnow                                     
+[K[1m[32m   Compiling[0m toml_datetime v0.6.5
+[1m[36m    Building[0m [=>                        ] 11/125: syn, toml_datetime                              
+[K[1m[32m   Compiling[0m compiler_builtins v0.1.101
+[1m[36m    Building[0m [=>                        ] 12/125: syn, compiler_builtins(build.rs)                
+[1m[36m    Building[0m [=>                        ] 13/125: syn, compiler_builtins(build)                   
+[K[1m[32m   Compiling[0m core v0.0.0 (/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core)
+[1m[36m    Building[0m [=>                        ] 14/125: syn, core                                       
+[K[1m[32m   Compiling[0m toml_edit v0.20.7
+[1m[36m    Building[0m [==>                       ] 15/125: core, toml_edit                                 
+[K[1m[32m   Compiling[0m proc-macro-crate v2.0.0
+[1m[36m    Building[0m [==>                       ] 16/125: core, proc-macro-crate                          
+[K[1m[32m   Compiling[0m syn v2.0.42
+[1m[36m    Building[0m [==>                       ] 17/125: syn, core                                       
+[K[1m[32m   Compiling[0m rustc-std-workspace-core v1.99.0 (/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/rustc-std-workspace-core)
+[1m[36m    Building[0m [==>                       ] 18/125: syn, rustc-std-workspace-core                   
+[1m[36m    Building[0m [==>                       ] 19/125: syn, compiler_builtins                          
+[K[1m[32m   Compiling[0m alloc v0.0.0 (/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc)
+[1m[36m    Building[0m [===>                      ] 20/125: syn, alloc                                      
+[K[1m[32m   Compiling[0m parity-scale-codec-derive v3.6.9
+[1m[36m    Building[0m [===>                      ] 21/125: parity-scale-codec-derive, alloc                
+[K[1m[32m   Compiling[0m impl-trait-for-tuples v0.2.2
+[1m[36m    Building[0m [===>                      ] 22/125: parity-scale-codec-derive, impl-trait-for-tuples
+[K[1m[32m   Compiling[0m serde v1.0.193
+[1m[36m    Building[0m [===>                      ] 23/125: impl-trait-for-tuples, serde(build.rs)          
+[1m[36m    Building[0m [===>                      ] 24/125: impl-trait-for-tuples, serde(build)             
+[K[1m[32m   Compiling[0m serde_derive v1.0.193
+[1m[36m    Building[0m [====>                     ] 25/125: impl-trait-for-tuples, serde_derive             
+[K[1m[32m   Compiling[0m derive_more v0.99.17
+[1m[36m    Building[0m [====>                     ] 26/125: serde_derive, derive_more                       
+[K[1m[32m   Compiling[0m toml_edit v0.19.15
+[1m[36m    Building[0m [====>                     ] 27/125: toml_edit, derive_more                          
+[K[1m[32m   Compiling[0m once_cell v1.19.0
+[1m[36m    Building[0m [====>                     ] 28/125: toml_edit, once_cell                            
+[K[1m[32m   Compiling[0m proc-macro-crate v1.3.1
+[1m[36m    Building[0m [=====>                    ] 29/125: toml_edit, proc-macro-crate                     
+[1m[36m    Building[0m [=====>                    ] 30/125: toml_edit, serde                                
+[K[1m[32m   Compiling[0m strsim v0.10.0
+[1m[36m    Building[0m [=====>                    ] 31/125: strsim, serde                                   
+[K[1m[32m   Compiling[0m ident_case v1.0.1
+[1m[36m    Building[0m [=====>                    ] 32/125: ident_case, serde                               
+[K[1m[32m   Compiling[0m fnv v1.0.7
+[1m[36m    Building[0m [=====>                    ] 33/125: serde, fnv                                      
+[K[1m[32m   Compiling[0m version_check v0.9.4
+[1m[36m    Building[0m [======>                   ] 34/125: version_check, serde                            
+[K[1m[32m   Compiling[0m radium v0.7.0
+[1m[36m    Building[0m [======>                   ] 35/125: serde, radium(build.rs)                         
+[K[1m[32m   Compiling[0m typenum v1.17.0
+[1m[36m    Building[0m [======>                   ] 36/125: typenum(build.rs), serde                        
+[1m[36m    Building[0m [======>                   ] 37/125: serde, typenum(build)                           
+[1m[36m    Building[0m [======>                   ] 38/125: serde, radium(build)                            
+[K[1m[32m   Compiling[0m generic-array v0.14.7
+[1m[36m    Building[0m [=======>                  ] 39/125: generic-array(build.rs), serde                  
+[K[1m[32m   Compiling[0m darling_core v0.14.4
+[1m[36m    Building[0m [=======>                  ] 40/125: serde, darling_core                             
+[K[1m[32m   Compiling[0m tap v1.0.1
+[1m[36m    Building[0m [=======>                  ] 41/125: tap, darling_core                               
+[K[1m[32m   Compiling[0m wyz v0.5.1
+[1m[36m    Building[0m [=======>                  ] 42/125: wyz, darling_core                               
+[1m[36m    Building[0m [=======>                  ] 43/125: generic-array(build), darling_core              
+[1m[36m    Building[0m [========>                 ] 44/125: radium, darling_core                            
+[1m[36m    Building[0m [========>                 ] 45/125: typenum, darling_core                           
+[K[1m[32m   Compiling[0m arrayvec v0.7.4
+[1m[36m    Building[0m [========>                 ] 46/125: arrayvec, darling_core                          
+[K[1m[32m   Compiling[0m funty v2.0.0
+[1m[36m    Building[0m [========>                 ] 47/125: funty, darling_core                             
+[K[1m[32m   Compiling[0m cfg-if v1.0.0
+[1m[36m    Building[0m [========>                 ] 48/125: cfg-if, darling_core                            
+[K[1m[32m   Compiling[0m byte-slice-cast v1.2.2
+[1m[36m    Building[0m [=========>                ] 49/125: byte-slice-cast, darling_core                   
+[K[1m[32m   Compiling[0m parity-scale-codec v3.6.9
+[1m[36m    Building[0m [=========>                ] 50/125: parity-scale-codec, darling_core                
+[K[1m[32m   Compiling[0m darling_macro v0.14.4
+[1m[36m    Building[0m [=========>                ] 51/125: parity-scale-codec, darling_macro               
+[K[1m[32m   Compiling[0m bitvec v1.0.1
+[1m[36m    Building[0m [=========>                ] 52/125: bitvec, darling_macro                           
+[K[1m[32m   Compiling[0m darling v0.14.4
+[1m[36m    Building[0m [==========>               ] 53/125: bitvec, darling                                 
+[1m[36m    Building[0m [==========>               ] 54/125: bitvec, generic-array                           
+[K[1m[32m   Compiling[0m scale-info-derive v2.10.0
+[1m[36m    Building[0m [==========>               ] 55/125: bitvec, scale-info-derive                       
+[1m[36m    Building[0m [==========>               ] 56/125: cfg-if, scale-info-derive                       
+[K[1m[32m   Compiling[0m memchr v2.6.4
+[1m[36m    Building[0m [==========>               ] 57/125: scale-info-derive, memchr                       
+[K[1m[32m   Compiling[0m scale-info v2.10.0
+[1m[36m    Building[0m [===========>              ] 58/125: scale-info, memchr                              
+[K[1m[32m   Compiling[0m rustix v0.38.28
+[1m[36m    Building[0m [===========>              ] 59/125: scale-info, rustix(build.rs)                    
+[1m[36m    Building[0m [===========>              ] 60/125: scale-info, rustix(build)                       
+[K[1m[32m   Compiling[0m aho-corasick v1.1.2
+[1m[36m    Building[0m [===========>              ] 61/125: scale-info, aho-corasick                        
+[K[1m[32m   Compiling[0m crypto-common v0.1.6
+[1m[36m    Building[0m [===========>              ] 62/125: aho-corasick, crypto-common                     
+[K[1m[32m   Compiling[0m block-buffer v0.10.4
+[1m[36m    Building[0m [============>             ] 63/125: aho-corasick, block-buffer                      
+[1m[36m    Building[0m [============>             ] 64/125: aho-corasick, byte-slice-cast                   
+[1m[36m    Building[0m [============>             ] 65/125: aho-corasick, arrayvec                          
+[K[1m[32m   Compiling[0m bitflags v2.4.1
+[1m[36m    Building[0m [============>             ] 66/125: aho-corasick, bitflags                          
+[K[1m[32m   Compiling[0m smallvec v1.11.2
+[1m[36m    Building[0m [============>             ] 67/125: aho-corasick, smallvec                          
+[K[1m[32m   Compiling[0m regex-syntax v0.8.2
+[1m[36m    Building[0m [=============>            ] 68/125: aho-corasick, regex-syntax                      
+[K[1m[32m   Compiling[0m autocfg v1.1.0
+[1m[36m    Building[0m [=============>            ] 69/125: autocfg, regex-syntax                           
+[K[1m[32m   Compiling[0m subtle v2.4.1
+[1m[36m    Building[0m [=============>            ] 70/125: subtle, regex-syntax                            
+[K[1m[32m   Compiling[0m linux-raw-sys v0.4.12
+[1m[36m    Building[0m [=============>            ] 71/125: linux-raw-sys, regex-syntax                     
+[1m[36m    Building[0m [=============>            ] 72/125: rustix, regex-syntax                            
+[K[1m[32m   Compiling[0m digest v0.10.7
+[1m[36m    Building[0m [==============>           ] 73/125: digest, rustix                                  
+[K[1m[32m   Compiling[0m regex-automata v0.4.3
+[1m[36m    Building[0m [==============>           ] 74/125: digest, regex-automata                          
+[K[1m[32m   Compiling[0m num-traits v0.2.17
+[1m[36m    Building[0m [==============>           ] 75/125: num-traits(build.rs), regex-automata            
+[1m[36m    Building[0m [==============>           ] 76/125: parity-scale-codec, regex-automata              
+[K[1m[32m   Compiling[0m scale-bits v0.4.0
+[1m[36m    Building[0m [===============>          ] 77/125: scale-bits, regex-automata                      
+[K[1m[32m   Compiling[0m ink_prelude v4.3.0
+[1m[36m    Building[0m [===============>          ] 78/125: ink_prelude, regex-automata                     
+[K[1m[32m   Compiling[0m scale-decode-derive v0.9.0
+[1m[36m    Building[0m [===============>          ] 79/125: scale-decode-derive, regex-automata             
+[K[1m[32m   Compiling[0m scale-encode-derive v0.5.0
+[1m[36m    Building[0m [===============>          ] 80/125: scale-encode-derive, regex-automata             
+[K[1m[32m   Compiling[0m xxhash-rust v0.8.8
+[1m[36m    Building[0m [===============>          ] 81/125: xxhash-rust, regex-automata                     
+[K[1m[32m   Compiling[0m serde_json v1.0.108
+[1m[36m    Building[0m [================>         ] 82/125: serde_json(build.rs), regex-automata            
+[K[1m[32m   Compiling[0m either v1.9.0
+[1m[36m    Building[0m [================>         ] 83/125: either, regex-automata                          
+[K[1m[32m   Compiling[0m paste v1.0.14
+[1m[36m    Building[0m [================>         ] 84/125: paste(build.rs), regex-automata                 
+[K[1m[32m   Compiling[0m itertools v0.10.5
+[1m[36m    Building[0m [================>         ] 85/125: paste(build.rs), itertools                      
+[1m[36m    Building[0m [================>         ] 86/125: paste(build), itertools                         
+[1m[36m    Building[0m [=================>        ] 87/125: serde_json(build), itertools                    
+[K[1m[32m   Compiling[0m ink_primitives v4.3.0
+[1m[36m    Building[0m [=================>        ] 88/125: ink_primitives, itertools                       
+[K[1m[32m   Compiling[0m scale-encode v0.5.0
+[1m[36m    Building[0m [=================>        ] 89/125: scale-encode, itertools                         
+[K[1m[32m   Compiling[0m scale-decode v0.9.0
+[1m[36m    Building[0m [=================>        ] 90/125: scale-decode, itertools                         
+[K[1m[32m   Compiling[0m regex v1.10.2
+[1m[36m    Building[0m [=================>        ] 91/125: scale-decode, regex                             
+[1m[36m    Building[0m [==================>       ] 92/125: scale-decode, num-traits(build)                 
+[K[1m[32m   Compiling[0m blake2 v0.10.6
+[1m[36m    Building[0m [==================>       ] 93/125: scale-decode, blake2                            
+[K[1m[32m   Compiling[0m is-terminal v0.4.9
+[1m[36m    Building[0m [==================>       ] 94/125: scale-decode, is-terminal                       
+[1m[36m    Building[0m [==================>       ] 95/125: scale-decode, ink_prelude                       
+[K[1m[32m   Compiling[0m itoa v1.0.10
+[1m[36m    Building[0m [==================>       ] 96/125: scale-decode, itoa                              
+[1m[36m    Building[0m [===================>      ] 97/125: scale-decode, xxhash-rust                       
+[K[1m[32m   Compiling[0m log v0.4.20
+[1m[36m    Building[0m [===================>      ] 98/125: scale-decode, log                               
+[K[1m[32m   Compiling[0m humantime v2.1.0
+[1m[36m    Building[0m [===================>      ] 99/125: scale-decode, humantime                         
+[K[1m[32m   Compiling[0m ryu v1.0.16
+[1m[36m    Building[0m [===================>     ] 100/125: scale-decode, ryu                               
+[K[1m[32m   Compiling[0m termcolor v1.4.0
+[1m[36m    Building[0m [===================>     ] 101/125: scale-decode, termcolor                         
+[K[1m[32m   Compiling[0m env_logger v0.10.1
+[1m[36m    Building[0m [===================>     ] 102/125: scale-decode, env_logger                        
+[1m[36m    Building[0m [===================>     ] 103/125: scale-decode, serde_json                        
+[1m[36m    Building[0m [===================>     ] 104/125: ink_primitives, serde_json                      
+[K[1m[32m   Compiling[0m ink_ir v4.3.0
+[1m[36m    Building[0m [====================>    ] 105/125: ink_ir, serde_json                              
+[1m[36m    Building[0m [====================>    ] 106/125: ink_ir, num-traits                              
+[K[1m[32m   Compiling[0m ink_storage_traits v4.3.0
+[1m[36m    Building[0m [====================>    ] 107/125: ink_ir, ink_storage_traits                      
+[1m[36m    Building[0m [====================>    ] 108/125: ink_ir, paste                                   
+[K[1m[32m   Compiling[0m ink_allocator v4.3.0
+[1m[36m    Building[0m [====================>    ] 109/125: ink_ir, ink_allocator                           
+[K[1m[32m   Compiling[0m impl-serde v0.4.0
+[1m[36m    Building[0m [=====================>   ] 110/125: ink_ir, impl-serde                              
+[K[1m[32m   Compiling[0m rlibc v1.0.0
+[1m[36m    Building[0m [=====================>   ] 111/125: ink_ir, rlibc                                   
+[K[1m[32m   Compiling[0m arrayref v0.3.7
+[1m[36m    Building[0m [=====================>   ] 112/125: arrayref, rlibc                                 
+[K[1m[32m   Compiling[0m static_assertions v1.1.0
+[1m[36m    Building[0m [=====================>   ] 113/125: arrayref, static_assertions                     
+[K[1m[32m   Compiling[0m heck v0.4.1
+[1m[36m    Building[0m [=====================>   ] 114/125: heck, static_assertions                         
+[K[1m[32m   Compiling[0m unicode-xid v0.2.4
+[1m[36m    Building[0m [======================>  ] 115/125: heck, unicode-xid                               
+[K[1m[32m   Compiling[0m ink_codegen v4.3.0
+[1m[36m    Building[0m [======================>  ] 116/125: heck, ink_codegen                               
+[K[1m[32m   Compiling[0m synstructure v0.13.0
+[1m[36m    Building[0m [======================>  ] 117/125: synstructure, ink_codegen                       
+[K[1m[32m   Compiling[0m ink_env v4.3.0
+[1m[36m    Building[0m [======================>  ] 118/125: ink_codegen, ink_env                            
+[K[1m[32m   Compiling[0m array-init v2.1.0
+[1m[36m    Building[0m [======================>  ] 119/125: ink_codegen, array-init                         
+[K[1m[32m   Compiling[0m ink_storage v4.3.0
+[1m[36m    Building[0m [=======================> ] 120/125: ink_storage, ink_codegen                        
+[1m[36m    Building[0m [=======================> ] 121/125: ink_codegen                                     
+[K[1m[32m   Compiling[0m ink_macro v4.3.0
+[1m[36m    Building[0m [=======================> ] 122/125: ink_macro                                       
+[K[1m[32m   Compiling[0m ink v4.3.0
+[1m[36m    Building[0m [=======================> ] 123/125: ink                                             
+[K[1m[32m   Compiling[0m Vault v0.1.0 (/tmp/cargo-contract_py0PXA)
+[1m[36m    Building[0m [=======================> ] 124/125: Vault(bin)                                      
+[K[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared crate or module `ink_prelude`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Vault/lib.rs:7:9[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    use ink_prelude::vec::Vec;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared crate or module `ink_prelude`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Vault(bin)                                      
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `transferred_balance` found for struct `EnvAccess` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Vault/lib.rs:45:36[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m45[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let value = self.env().transferred_balance();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: there is a method with a similar name: `transferred_value`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Vault(bin)                                      
+[K[0m[1mSome errors have detailed explanations: E0433, E0599.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Vault(bin)                                      
+[K[0m[1mFor more information about an error, try `rustc --explain E0433`.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Vault(bin)                                      
+[K[1m[31merror[0m[1m:[0m could not compile `Vault` (bin "Vault") due to 2 prevERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "build", "--color=always", "--target=wasm32-unknown-unknown", "-Zbuild-std=core,alloc", "--no-default-features", "--release", "--target-dir=/workspaces/ink-jet/dataset/Vault/target/ink", "--features", "ink/ink-debug"] exited with code 101

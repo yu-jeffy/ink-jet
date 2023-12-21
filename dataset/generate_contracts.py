@@ -2,20 +2,22 @@ import os
 import subprocess
 import openai
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
 # For each smart contract
-# 1. Create new Rust contract project (cargo contract new name_number)
+# 1. Create new Rust contract project with "cargo contract new NAME"
 # 2. Generate smart contract with GPT
 # 3. Replace default smart contract in lib.rs with generated smart contract
-# 4. Run cargo contract build to compile the smart contract
-# 5. Save terminal output if there are errors, otherwise save a file saying "success"
+# 4. Run "cargo contract build" to compile the smart contract
+# 5. Save terminal output in build_result.txt if there are errors, otherwise save a file saying "success"
+# 6. Run CoinFabrik Scout and save output as JSON <--- TO DO
 
 
-# set system prompt to prompt_twoexamples.txt
+# set system prompt to prompt.txt
 base_prompt = ""
-with open('prompt_twoexamples.txt', 'r') as file:
+with open('prompt.txt', 'r') as file:
     base_prompt = file.read()
 
 # gpt call
@@ -27,10 +29,11 @@ def generate_smart_contract(prompt):
             {"role": "system", "content": ""},
             {"role": "user", "content": prompt}
         ],
-        temperature=0.5,
+        temperature=0.8,
         max_tokens=3000, # larger token size to fit full smart contract
     )
     content = response.choices[0].message.content
+    # print(content)
     return content
 
 # Removes ```rust from the beginning and ``` from the end of the string (gpt response).
@@ -49,7 +52,7 @@ def create_cargo_contract_project(folder_name):
 
 # Write your Rust code to the lib.rs file in the new project folder
 def write_to_lib_rs(folder_name, rust_code):
-    lib_rs_path = os.path.join(folder_name, "src", "lib.rs")
+    lib_rs_path = os.path.join(folder_name, "lib.rs")
     with open(lib_rs_path, 'w') as file:
         file.write(rust_code)
 
@@ -85,24 +88,31 @@ def main():
             # Clean up the contract
             contract_clean = remove_mardown_markers(contract)
 
+            folder_name = processed_line.replace(" ", "_")
             # Create the new project
-            result = create_cargo_contract_project(line)
+            result = create_cargo_contract_project(folder_name)
             if result.returncode != 0:
                 print(f"Failed to create cargo contract project: {result.stderr}")
                 return
 
+            # Wait for 5 seconds for the contract project to be created
+            time.sleep(5)
+
             # Write the smart contract to the lib.rs file
-            write_to_lib_rs(line, contract_clean)
+            write_to_lib_rs(folder_name, contract_clean)
 
             # Build the cargo contract
-            result = build_cargo_contract(line)
+            result = build_cargo_contract(folder_name)
 
             # Write the build/compile result to a file
-            write_result_to_file(line, result)
+            write_result_to_file(folder_name, result)
 
             if result.returncode == 0:
                 print("Cargo contract built successfully.")
             else:
                 print(f"Cargo contract build failed: {result.stderr}")
+            
+            # TO DO:
+            # Run CoinFabrik Scout and save output as JSON
 
 main()
