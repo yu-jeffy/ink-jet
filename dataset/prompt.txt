@@ -2,7 +2,9 @@ Write a {type} smart contract in ink!.
 
 Write the ENTIRE smart contract. Do not be verbose. Produce ONLY code in your response.
 
-Learn from these examples for syntax:
+Start with: #![cfg_attr(not(feature = "std"), no_std, no_main)]
+
+Learn from these examples for the correct syntax:
 ```
 #![cfg_attr(not(feature = "std"), no_std, no_main)]
 
