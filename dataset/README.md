@@ -1,3 +1,4 @@
+# Installation Instructions
 ## Install Rust
 ### MacOS / Linux
 ```
@@ -8,7 +9,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 `https://forge.rust-lang.org/infra/other-installation-methods.html`
 
-# Install cargo-contract
+## Install cargo-contract
 Install the `cargo-contract` tool, which is a Cargo subcommand. You can install it using the following command:
 
 ```shell
