@@ -9,6 +9,13 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 `https://forge.rust-lang.org/infra/other-installation-methods.html`
 
+### Additional Steps
+You may need to run:
+
+```rustup component add rust-src --toolchain stable```
+
+```rustup target add wasm32-unknown-unknown --toolchain stable```
+
 ## Install cargo-contract
 Install the `cargo-contract` tool, which is a Cargo subcommand. You can install it using the following command:
 
@@ -31,9 +38,3 @@ To run Scout on your project, navigate to its root directory and execute the fol
 
 `cargo scout-audit`
 
-### Additional Steps
-### May need to run:
-
-```rustup component add rust-src --toolchain stable```
-
-```rustup target add wasm32-unknown-unknown --toolchain stable```
