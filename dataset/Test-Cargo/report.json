@@ -1,0 +1,23 @@
+{
+  "integer-overflow-or-underflow": {
+    "error_msg": "Potential for integer arithmetic overflow/underflow. Consider checked, wrapping or saturating arithmetic.",
+    "spans": [
+      "{\"physicalLocation\":{\"artifactLocation\":{\"uri\":\"lib.rs\"},\"region\":{\"endColumn\":63,\"endLine\":68,\"startColumn\":41,\"startLine\":68}}}",
+      "{\"physicalLocation\":{\"artifactLocation\":{\"uri\":\"lib.rs\"},\"region\":{\"endColumn\":59,\"endLine\":70,\"startColumn\":39,\"startLine\":70}}}"
+    ]
+  },
+  "unprotected-mapping-operation": {
+    "error_msg": "This mapping operation is called without access control on a different key than the caller's address",
+    "spans": [
+      "{\"physicalLocation\":{\"artifactLocation\":{\"uri\":\"lib.rs\"},\"region\":{\"endColumn\":53,\"endLine\":39,\"startColumn\":22,\"startLine\":39}}}",
+      "{\"physicalLocation\":{\"artifactLocation\":{\"uri\":\"lib.rs\"},\"region\":{\"endColumn\":60,\"endLine\":70,\"startColumn\":27,\"startLine\":70}}}"
+    ]
+  },
+  "zero-or-test-address": {
+    "error_msg": "Not checking for a zero-address could lead to a locked contract",
+    "spans": [
+      "{\"physicalLocation\":{\"artifactLocation\":{\"uri\":\"lib.rs\"},\"region\":{\"endColumn\":50,\"endLine\":57,\"startColumn\":34,\"startLine\":57}}}",
+      "{\"physicalLocation\":{\"artifactLocation\":{\"uri\":\"lib.rs\"},\"region\":{\"endColumn\":49,\"endLine\":62,\"startColumn\":36,\"startLine\":62}}}"
+    ]
+  }
+}
