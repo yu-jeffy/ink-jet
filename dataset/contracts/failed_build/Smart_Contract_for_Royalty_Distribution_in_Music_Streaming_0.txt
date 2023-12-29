@@ -1,0 +1,203 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_ahXRhu)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `ink::ink_primitives::AccountId: Default` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:14:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Default)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[38;5;12m-------[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        admin: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Default` is not implemented for `ink::ink_primitives::AccountId`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Default` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no function or associated item named `default` found for struct `RoyaltyInfo` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:70:58[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub struct RoyaltyInfo {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m----------------------[0m[0m [0m[0m[1m[38;5;12mfunction or associated item `default` not found for this struct[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.royalties.insert(song_id, &RoyaltyInfo::default());[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mfunction or associated item not found in `RoyaltyInfo`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait defines an item `default`, perhaps you need to implement it:[0m
+[0m           candidate #1: `Default`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `transferred_balance` found for struct `EnvAccess` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:88:37[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m88[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let amount = self.env().transferred_balance();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: there is a method with a similar name: `transferred_value`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `iter` found for struct `Mapping` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:97:49[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let total_shares: u32 = info.shares.iter().fold(0, |acc, (_, &s)| acc + s as u32);[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `Mapping<AccountId, u16>`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `iter` found for struct `Mapping` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:100:56[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m100[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            for (collaborator, &shares) in info.shares.iter() {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                       [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `Mapping<AccountId, u16>`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `Mapping<ink::ink_primitives::AccountId, u16>: Clone` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:24:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, Clone, scale::Encode, scale::Decode, PartialEq, Eq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        shares: Mapping<AccountId, u16>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Clone` is not implemented for `Mapping<ink::ink_primitives::AccountId, u16>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `Mapping<ink::ink_primitives::AccountId, u128>: Clone` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:26:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, Clone, scale::Encode, scale::Decode, PartialEq, Eq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;12m-----[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        collected: Mapping<AccountId, Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Clone` is not implemented for `Mapping<ink::ink_primitives::AccountId, u128>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Clone` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `Mapping<ink::ink_primitives::AccountId, u16>: WrapperTypeEncode` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:18:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, Clone, scale::Encode, scale::Decode, PartialEq, Eq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `WrapperTypeEncode` is not implemented for `Mapping<ink::ink_primitives::AccountId, u16>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the following other types implement trait `WrapperTypeEncode`:[0m
+[0m             Box<T>[0m
+[0m             Cow<'a, T>[0m
+[0m             parity_scale_codec::Ref<'a, T, U>[0m
+[0m             Rc<T>[0m
+[0m             Arc<T>[0m
+[0m             Vec<T>[0m
+[0m             String[0m
+[0m             &T[0m
+[0m             &mut T[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `Mapping<ink::ink_primitives::AccountId, u16>` to implement `Encode`[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `scale::Encode` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `Mapping<ink::ink_primitives::AccountId, u128>: WrapperTypeEncode` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:18:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, Clone, scale::Encode, scale::Decode, PartialEq, Eq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `WrapperTypeEncode` is not implemented for `Mapping<ink::ink_primitives::AccountId, u128>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the following other types implement trait `WrapperTypeEncode`:[0m
+[0m             Box<T>[0m
+[0m             Cow<'a, T>[0m
+[0m             parity_scale_codec::Ref<'a, T, U>[0m
+[0m             Rc<T>[0m
+[0m             Arc<T>[0m
+[0m             Vec<T>[0m
+[0m             String[0m
+[0m             &T[0m
+[0m             &mut T[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `Mapping<ink::ink_primitives::AccountId, u128>` to implement `Encode`[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `scale::Encode` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `Mapping<ink::ink_primitives::AccountId, u16>: WrapperTypeDecode` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:24:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        shares: Mapping<AccountId, u16>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `WrapperTypeDecode` is not implemented for `Mapping<ink::ink_primitives::AccountId, u16>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the following other types implement trait `WrapperTypeDecode`:[0m
+[0m             Box<T>[0m
+[0m             Rc<T>[0m
+[0m             Arc<T>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `Mapping<ink::ink_primitives::AccountId, u16>` to implement `parity_scale_codec::Decode`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `Mapping<ink::ink_primitives::AccountId, u128>: WrapperTypeDecode` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:26:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        collected: Mapping<AccountId, Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `WrapperTypeDecode` is not implemented for `Mapping<ink::ink_primitives::AccountId, u128>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the following other types implement trait `WrapperTypeDecode`:[0m
+[0m             Box<T>[0m
+[0m             Rc<T>[0m
+[0m             Arc<T>[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `Mapping<ink::ink_primitives::AccountId, u128>` to implement `parity_scale_codec::Decode`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0369][0m[0m[1m: binary operation `==` cannot be applied to type `Mapping<ink::ink_primitives::AccountId, u16>`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:24:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, Clone, scale::Encode, scale::Decode, PartialEq, Eq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;12m---------[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        shares: Mapping<AccountId, u16>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0369][0m[0m[1m: binary operation `==` cannot be applied to type `Mapping<ink::ink_primitives::AccountId, u128>`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:26:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, Clone, scale::Encode, scale::Decode, PartialEq, Eq)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;12m---------[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        collected: Mapping<AccountId, Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `PartialEq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `Mapping<ink::ink_primitives::AccountId, u16>: core::cmp::Eq` is not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:24:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, Clone, scale::Encode, scale::Decode, PartialEq, Eq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                    [0m[0m[1m[38;5;12m--[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m24[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        shares: Mapping<AccountId, u16>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `core::cmp::Eq` is not implemented for `Mapping<ink::ink_primitives::AccountId, u16>`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `AssertParamIsEq`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:326:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m326[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct AssertParamIsEq<T: Eq + ?Sized> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;10m^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `AssertParamIsEq`[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Eq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `Mapping<ink::ink_primitives::AccountId, u128>: core::cmp::Eq` is not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:26:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m18[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, Clone, scale::Encode, scale::Decode, PartialEq, Eq)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                                    [0m[0m[1m[38;5;12m--[0m[0m [0m[0m[1m[38;5;12min this derive macro expansion[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m26[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        collected: Mapping<AccountId, Balance>,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `core::cmp::Eq` is not implemented for `Mapping<ink::ink_primitives::AccountId, u128>`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `AssertParamIsEq`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:326:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m326[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct AssertParamIsEq<T: Eq + ?Sized> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;10m^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `AssertParamIsEq`[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: this error originates in the derive macro `Eq` (in Nightly builds, run with -Z macro-backtrace for more info)[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mSome errors have detailed explanations: E0277, E0369, E0599.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mFor more information about an error, try `rustc --explain E0277`.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[1m[31merror[0m[1m:[0m could not compile `Lending` (bin "Lending") due to 15 prevERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "build", "--color=always", "--target=wasm32-unknown-unknown", "-Zbuild-std=core,alloc", "--no-default-features", "--release", "--target-dir=/workspaces/ink-jet/dataset/Test-Cargo/target/ink", "--features", "ink/ink-debug"] exited with code 101

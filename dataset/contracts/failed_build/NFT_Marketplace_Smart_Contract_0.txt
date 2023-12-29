@@ -1,0 +1,730 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_VeiAii)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `ink_lang`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:6:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m6[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0muse ink_lang as ink;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno external crate `ink_lang`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink::contract`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:8:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[ink::contract][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:12:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(storage)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:25:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(event)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:27:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:29:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m29[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:34:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(event)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:36:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m36[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:41:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(event)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:43:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:47:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(event)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:49:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:51:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m51[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:53:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m53[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:58:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m58[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(event)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:60:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:62:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:67:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(event)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:69:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:71:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m71[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:76:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m76[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(constructor)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:84:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m84[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:97:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:108:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m108[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:117:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m117[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message, payable)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:141:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m141[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:151:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m151[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:14:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        listings: Mapping<Hash, Listing>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:15:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        offers: Mapping<(Hash, AccountId), Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:15:32[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        offers: Mapping<(Hash, AccountId), Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                               [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub struct NftMarketplace[0m[0m[38;5;10m<AccountId>[0m[0m {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                              [0m[0m[38;5;10m+++++++++++[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:15:44[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        offers: Mapping<(Hash, AccountId), Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub struct NftMarketplace[0m[0m[38;5;10m<Balance>[0m[0m {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                              [0m[0m[38;5;10m+++++++++[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:21:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        seller: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:22:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        price: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:21:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m21[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        seller: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub struct Listing[0m[0m[38;5;10m<AccountId>[0m[0m {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                       [0m[0m[38;5;10m+++++++++++[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:22:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        price: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m20[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub struct Listing[0m[0m[38;5;10m<Balance>[0m[0m {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                       [0m[0m[38;5;10m+++++++++[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:28:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m28[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        token_id: Hash,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:30:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        seller: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:31:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m31[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        price: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:37:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m37[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        token_id: Hash,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:38:20[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m38[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        new_price: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                   [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:44:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m44[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        token_id: Hash,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:50:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m50[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        token_id: Hash,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:52:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m52[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        seller: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:54:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m54[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        buyer: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:55:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m55[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        price: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:61:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        token_id: Hash,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:63:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m63[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        buyer: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:64:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m64[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        price: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:70:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m70[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        token_id: Hash,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:72:16[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m72[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        buyer: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m               [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:85:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn list_token(&mut self, token_id: Hash, price: Balance) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:85:61[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn list_token(&mut self, token_id: Hash, price: Balance) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                            [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:98:50[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m98[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn update_price(&mut self, token_id: Hash, new_price: Balance) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:98:67[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m98[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn update_price(&mut self, token_id: Hash, new_price: Balance) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                  [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:109:50[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m109[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn delist_token(&mut self, token_id: Hash) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m  [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:118:47[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m118[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn buy_token(&mut self, token_id: Hash) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m  [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:142:49[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m142[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn place_offer(&mut self, token_id: Hash, offer: Balance) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m  [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:142:62[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m142[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn place_offer(&mut self, token_id: Hash, offer: Balance) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                             [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0573][0m[0m[1m: expected type, found derive macro `Hash`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:152:52[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m152[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn withdraw_offer(&mut self, token_id: Hash) {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                   [0m[0m[1m[38;5;9m^^^^[0m[0m [0m[0m[1m[38;5;9mnot a type[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing this trait instead[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m  [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse core::hash::Hash;[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+
+[0m[1m[33mwarning[0m[0m[1m: unused import: `ink::prelude::vec::Vec`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:5:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0muse ink::prelude::vec::Vec;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:86:31[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m86[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let caller = self.env().caller();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:90:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m90[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().emit_event(Listed {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:99:31[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m99[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let caller = self.env().caller();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:105:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().emit_event(PriceUpdated { token_id, new_price });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:110:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m110[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let caller = self.env().caller();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:114:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m114[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().emit_event(Delisted { token_id });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:119:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m119[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let caller = self.env().caller();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:120:36[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m120[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let transferred = self.env().transferred_balance();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                   [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:125:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m125[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().transfer(listing.seller, listing.price).expect("Transfer failed");[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:130:22[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m130[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                self.env().transfer(caller, refund).expect("Refund failed");[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:133:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m133[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().emit_event(Sold {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:143:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m143[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let caller = self.env().caller();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:148:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m148[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().emit_event(OfferPlaced { token_id, buyer: caller, price: offer });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:153:31[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m153[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let caller = self.env().caller();[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut NftMarketplace` in the current scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:155:18[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m155[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().emit_event(OfferWithdrawn { token_id, buyer: caller });[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut NftMarketplace`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m            candidate #1: `Env`[0m
+[0m            candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mSome errors have detailed explanations: E0412, E0432, E0573, E0599.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mFor more information about an error, try `rustc --explain E0412`.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[1m[33mwarning[0m[1m:[0m `Lending` (bin "Lending") generated 1 warning
+[1m[31merror[0m[1m:[0m could not compile `Lending` (bin "Lending") due to 74 previous errors; 1 warnERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "build", "--color=always", "--target=wasm32-unknown-unknown", "-Zbuild-std=core,alloc", "--no-default-features", "--release", "--target-dir=/workspaces/ink-jet/dataset/Test-Cargo/target/ink", "--features", "ink/ink-debug"] exited with code 101

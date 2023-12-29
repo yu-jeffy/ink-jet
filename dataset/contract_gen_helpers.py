@@ -19,8 +19,8 @@ def generate_smart_contract(prompt):
             {"role": "system", "content": ""},
             {"role": "user", "content": prompt}
         ],
-        temperature=0.8,
-        max_tokens=3000,  # larger token size to fit full smart contract
+        temperature=0.6,
+        max_tokens=4000,  # larger token size to fit full smart contract
     )
     content = response.choices[0].message.content
     # print(content)

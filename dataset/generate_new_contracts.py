@@ -8,9 +8,9 @@ from contract_gen_helpers import (
 
 def generate_new_contracts():
     # CONSTANTS
-    MAX_CATEGORIES = 2
+    MAX_CATEGORIES = 15
     CONTRACTS_PER_CATEGORY = 1  # How many contracts to generate for each category
-    CATEGORY_FILE = 'config/categories_single_test.txt'  # Where to pull list of categories from
+    CATEGORY_FILE = 'config/categories_specific.txt'  # Where to pull list of categories from
     PROMPT_FILE = 'config/prompt.txt'  # Where to pull basic prompt from
     CONTRACTS_DIR = 'contracts/generated/'  # Where to put contracts generated
 

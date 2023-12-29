@@ -1,0 +1,19 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_Ch6stp)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared crate or module `ink_env`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:7:9[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    use ink_env::call::build_call;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared crate or module `ink_env`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared crate or module `ink_prelude`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:8:9[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m8[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    use ink_prelude::vec::Vec;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared crate or module `ink_prelude`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mFor more information about this error, try `rustc --explain E0433`.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[1m[31merror[0m[1m:[0m could not compile `Lending` (bin "Lending") due to 2 prevERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "build", "--color=always", "--target=wasm32-unknown-unknown", "-Zbuild-std=core,alloc", "--no-default-features", "--release", "--target-dir=/workspaces/ink-jet/dataset/Test-Cargo/target/ink", "--features", "ink/ink-debug"] exited with code 101

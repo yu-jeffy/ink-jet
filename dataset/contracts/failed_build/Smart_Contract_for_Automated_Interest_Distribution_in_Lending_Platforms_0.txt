@@ -1,0 +1,422 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_otUfvu)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `ink_lang`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:5:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m5[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0muse ink_lang as ink;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mno external crate `ink_lang`[0m
+
+[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared crate or module `ink_storage`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:10:9[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m10[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    use ink_storage::traits::SpreadAllocate;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared crate or module `ink_storage`[0m
+
+[0m[1m[38;5;9merror[E0432][0m[0m[1m: unresolved import `ink::storage::collections`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:9:23[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    use ink::storage::collections::Vec as StorageVec;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m                      [0m[0m[1m[38;5;9m^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `collections` in `storage`[0m
+
+[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the attribute macro `ink::contract`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:7:3[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m7[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m#[ink::contract][0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m  [0m[0m[1m[38;5;9m^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot determine resolution for the derive macro `SpreadAllocate`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:13:14[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m13[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(SpreadAllocate)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m             [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: import resolution is stuck, try simplifying macro imports[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:12:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m12[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(storage)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:22:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m22[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(event)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:24:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m24[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:26:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m26[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:30:7[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m30[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[ink(event)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m      [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:32:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m32[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:34:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m34[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(topic)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:39:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(constructor)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:47:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m47[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:60:11[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m60[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:101:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m101[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:106:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m106[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[0m[0m[1m: cannot find attribute `ink` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:111:11[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m111[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        #[ink(message)][0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m          [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mhelp: a built-in attribute with a similar name exists: `link`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `ink` is in scope, but it is a crate, not an attribute[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: use of undeclared crate or module `ink_lang`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:41:13[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m41[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            ink_lang::utils::initialize_contract(|contract: &mut Self| {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m            [0m[0m[1m[38;5;9m^^^^^^^^[0m[0m [0m[0m[1m[38;5;9muse of undeclared crate or module `ink_lang`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:15:21[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m15[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        total_lent: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                    [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:16:29[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m16[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        lenders: StorageVec<AccountId>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                            [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub struct InterestDistribution[0m[0m[38;5;10m<AccountId>[0m[0m {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                    [0m[0m[38;5;10m+++++++++++[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Mapping` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:17:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        balances: Mapping<AccountId, Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: consider importing one of these items[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m  [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse crate::Mapping;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m9[0m[0m  [0m[0m[38;5;10m+ [0m[0m    [0m[0m[38;5;10muse ink::storage::Mapping;[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:17:27[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        balances: Mapping<AccountId, Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                          [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub struct InterestDistribution[0m[0m[38;5;10m<AccountId>[0m[0m {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                    [0m[0m[38;5;10m+++++++++++[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:17:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m17[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        balances: Mapping<AccountId, Balance>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;14mhelp[0m[0m: you might be missing a type parameter[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m| [0m[0m    pub struct InterestDistribution[0m[0m[38;5;10m<Balance>[0m[0m {[0m
+[0m   [0m[0m[1m[38;5;12m|[0m[0m                                    [0m[0m[38;5;10m+++++++++[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Timestamp` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:19:22[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m19[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        last_update: Timestamp,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                     [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:25:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m25[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        account: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:27:19[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m27[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        interest: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                  [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:33:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m33[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        account: AccountId,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:35:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        amount: Balance,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:48:40[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m48[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn lend(&mut self, amount: Balance) -> bool {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                       [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:61:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m61[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn withdraw_interest(&mut self) -> Balance {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:73:48[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m73[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        fn update_interest(&mut self, account: AccountId) {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                               [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:93:47[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m93[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        fn calculate_interest(&self, balance: Balance, time_diff: Timestamp) -> Balance {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                              [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Timestamp` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:93:67[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m93[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        fn calculate_interest(&self, balance: Balance, time_diff: Timestamp) -> Balance {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                  [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:93:81[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m93[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        fn calculate_interest(&self, balance: Balance, time_diff: Timestamp) -> Balance {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                                [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:94:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m94[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            (balance * self.interest_rate as Balance / 100) * time_diff / (365 * 24 * 60 * 60)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:97:39[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m97[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        fn is_lender(&self, account: &AccountId) -> bool {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                      [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `AccountId` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:102:44[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m102[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn get_balance(&self, account: AccountId) -> Balance {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                           [0m[0m[1m[38;5;9m^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:102:58[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m102[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn get_balance(&self, account: AccountId) -> Balance {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                         [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0412][0m[0m[1m: cannot find type `Balance` in this scope[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:107:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m107[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn get_total_lent(&self) -> Balance {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mnot found in this scope[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[33mwarning[0m[0m[1m: unused import: `ink::storage::Mapping`[0m
+[0m [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:4:5[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m4[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0muse ink::storage::Mapping;[0m
+[0m  [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[33m^^^^^^^^^^^^^^^^^^^^^[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(unused_imports)]` on by default[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no function or associated item named `env` found for struct `InterestDistribution` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:43:46[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m14[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    pub struct InterestDistribution {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m    [0m[0m[1m[38;5;12m-------------------------------[0m[0m [0m[0m[1m[38;5;12mfunction or associated item `env` not found for this struct[0m
+[0m[1m[38;5;12m...[0m
+[0m[1m[38;5;12m43[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                contract.last_update = Self::env().block_timestamp();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                             [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mfunction or associated item not found in `InterestDistribution`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut InterestDistribution` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:49:31[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m49[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let caller = self.env().caller();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut InterestDistribution`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut InterestDistribution` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:62:31[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m62[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let caller = self.env().caller();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                              [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut InterestDistribution`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut InterestDistribution` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:66:18[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m66[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().emit_event(InterestWithdrawn {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                 [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut InterestDistribution`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut InterestDistribution` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:74:28[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m74[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let now = self.env().block_timestamp();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                           [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut InterestDistribution`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `env` found for mutable reference `&mut InterestDistribution` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:85:26[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m85[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m                    self.env().emit_event(InterestAccrued {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                         [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod not found in `&mut InterestDistribution`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: items from traits can only be used if the trait is implemented and in scope[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following traits define an item `env`, perhaps you need to implement one of them:[0m
+[0m           candidate #1: `Env`[0m
+[0m           candidate #2: `StaticEnv`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mSome errors have detailed explanations: E0412, E0432, E0433, E0599.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mFor more information about an error, try `rustc --explain E0412`.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[1m[33mwarning[0m[1m:[0m `Lending` (bin "Lending") generated 1 warning
+[1m[31merror[0m[1m:[0m could not compile `Lending` (bin "Lending") due to 46 previous errors; 1 warnERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "build", "--color=always", "--target=wasm32-unknown-unknown", "-Zbuild-std=core,alloc", "--no-default-features", "--release", "--target-dir=/workspaces/ink-jet/dataset/Test-Cargo/target/ink", "--features", "ink/ink-debug"] exited with code 101

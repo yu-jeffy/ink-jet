@@ -1,0 +1,49 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_VlijdK)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0637][0m[0m[1m: `&` without an explicit lifetime name cannot be used here[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:128:41[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m128[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn balance_of(&self, owner: &AccountId) -> Balance {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                        [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mexplicit lifetime name needed here[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `&ink::ink_primitives::AccountId: WrapperTypeDecode` is not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:128:34[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m128[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn balance_of(&self, owner: &AccountId) -> Balance {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                 [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `WrapperTypeDecode` is not implemented for `&ink::ink_primitives::AccountId`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the following other types implement trait `WrapperTypeDecode`:[0m
+[0m              Box<T>[0m
+[0m              Rc<T>[0m
+[0m              Arc<T>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `&ink::ink_primitives::AccountId` to implement `parity_scale_codec::Decode`[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `DispatchInput`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink-4.3.0/src/codegen/dispatch/type_check.rs:41:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m39[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct DispatchInput<T>(T)[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;12m-------------[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this struct[0m
+[0m[1m[38;5;12m40[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m41[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    T: scale::Decode + 'static;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `DispatchInput`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `&ink::ink_primitives::AccountId: WrapperTypeDecode` is not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:128:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m128[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn balance_of(&self, owner: &AccountId) -> Balance {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `WrapperTypeDecode` is not implemented for `&ink::ink_primitives::AccountId`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the following other types implement trait `WrapperTypeDecode`:[0m
+[0m              Box<T>[0m
+[0m              Rc<T>[0m
+[0m              Arc<T>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `&ink::ink_primitives::AccountId` to implement `parity_scale_codec::Decode`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mSome errors have detailed explanations: E0277, E0637.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mFor more information about an error, try `rustc --explain E0277`.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[1m[31merror[0m[1m:[0m could not compile `Lending` (bin "Lending") due to 3 prevERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "build", "--color=always", "--target=wasm32-unknown-unknown", "-Zbuild-std=core,alloc", "--no-default-features", "--release", "--target-dir=/workspaces/ink-jet/dataset/Test-Cargo/target/ink", "--features", "ink/ink-debug"] exited with code 101

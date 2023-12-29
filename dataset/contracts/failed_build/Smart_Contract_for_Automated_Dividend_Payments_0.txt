@@ -1,0 +1,27 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_jnobzy)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: no method named `transferred_balance` found for struct `EnvAccess` in the current scope[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:65:38[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m65[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            let deposit = self.env().transferred_balance();[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                     [0m[0m[1m[38;5;9m^^^^^^^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;9mhelp: there is a method with a similar name: `transferred_value`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: `?` couldn't convert the error to `automated_dividend_payment::Error`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:105:60[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m105[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m            self.env().transfer(caller, amount_to_withdraw)?;[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m                                                           [0m[0m[1m[38;5;9m^[0m[0m [0m[0m[1m[38;5;9mthe trait `From<ink::ink_env::Error>` is not implemented for `automated_dividend_payment::Error`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the question mark operation (`?`) implicitly performs a conversion on the error value using the `From` trait[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the following other types implement trait `FromResidual<R>`:[0m
+[0m              <core::result::Result<T, F> as FromResidual<Yeet<E>>>[0m
+[0m              <core::result::Result<T, F> as FromResidual<core::result::Result<Infallible, E>>>[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `core::result::Result<(), automated_dividend_payment::Error>` to implement `FromResidual<core::result::Result<Infallible, ink::ink_env::Error>>`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mSome errors have detailed explanations: E0277, E0599.[0m
+[0m[1mFor more information about an error, try `rustc --explain E0277`.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[1m[31merror[0m[1m:[0m could not compile `Lending` (bin "Lending") due to 2 prevERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "build", "--color=always", "--target=wasm32-unknown-unknown", "-Zbuild-std=core,alloc", "--no-default-features", "--release", "--target-dir=/workspaces/ink-jet/dataset/Test-Cargo/target/ink", "--features", "ink/ink-debug"] exited with code 101

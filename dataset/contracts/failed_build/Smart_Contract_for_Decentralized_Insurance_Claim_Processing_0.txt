@@ -1,0 +1,35 @@
+ [1/*] Building cargo project
+ [2/4] Post processing code
+ [3/4] Generating metadata
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_cWgy2j)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[33mwarning[0m[0m[1m: crate `Lending` should have a snake case name[0m
+[0m  [0m[0m[1m[38;5;12m|[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: convert the identifier to snake case: `lending`[0m
+[0m  [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: `#[warn(non_snake_case)]` on by default[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[1m[33mwarning[0m[1m:[0m `Lending` (bin "Lending") generated 1 warning
+[1m[32m    Finished[0m release [optimized] target(s) in 0.90s
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_ZoBvso)
+[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `ClaimData: StorageLayout` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:11:17[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m11[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        claims: Mapping<u64, ClaimData>,[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                [0m[0m[1m[38;5;9m^^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `StorageLayout` is not implemented for `ClaimData`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the following other types implement trait `StorageLayout`:[0m
+[0m             bool[0m
+[0m             char[0m
+[0m             i8[0m
+[0m             i16[0m
+[0m             i32[0m
+[0m             i64[0m
+[0m             i128[0m
+[0m             u8[0m
+[0m           and 62 others[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: required for `Mapping<u64, ClaimData, ResolverKey<AutoKey, ManualKey<2119065380>>>` to implement `StorageLayout`[0m
+
+[0m[1mFor more information about this error, try `rustc --explain E0277`.[0m
+[1m[31merror[0m[1m:[0m could not compile `Lending` (lib) due to previous error
+ERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "run", "--color=always", "--package", "metadata-gen", "--manifest-path=/tmp/cargo-contract_ZoBvso/Cargo.toml", "--target-dir", "/workspaces/ink-jet/dataset/Test-Cargo/target/ink", "--release"] exited with code 101

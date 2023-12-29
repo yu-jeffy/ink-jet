@@ -1,0 +1,12 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_WRLtOB)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9m
+Exited with error: [E0601]
+Your contract must be annotated with the `no_main` attribute.
+
+Examples how to do this:
+   - `#![cfg_attr(not(feature = "std"), no_std, no_main)]`
+   - `#[no_main]`
+
+ERROR: missing `no_main` attribute

@@ -1,10 +1,12 @@
-Write a {type} smart contract in ink!. Ensure syntax, types, and attributes are correct and match the examples.
+Write a {type} smart contract in ink!. 
 
-Write the ENTIRE smart contract. Do not be verbose. Produce ONLY code in your response.
+Ensure syntax, types, macros, and attributes are correct and match the examples. 
 
-Perform in context learning before responding.
+Produce a secure smart contract without vulnerabilities. Cover edge cases.
 
-Learn from these two examples for the correct, updated ink! syntax:
+Produce the ENTIRE smart contract in your response. Do not be verbose. Produce ONLY code in your response, NOTHING ELSE.
+
+Perform in context learning before responding. Learn from these two examples for the correct, updated ink! syntax:
 ```
 #![cfg_attr(not(feature = "std"), no_std, no_main)]
 

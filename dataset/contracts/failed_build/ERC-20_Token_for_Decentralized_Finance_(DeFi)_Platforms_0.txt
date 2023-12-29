@@ -1,0 +1,172 @@
+ [1/*] Building cargo project
+[1m[32m   Compiling[0m Lending v0.1.0 (/tmp/cargo-contract_dVIDpk)
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `scale` in `prelude`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:35:50[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, PartialEq, Eq, ink::prelude::scale::Encode, ink::prelude::scale::Decode)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                 [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `scale` in `prelude`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0433][0m[0m[1m: failed to resolve: could not find `scale` in `prelude`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:35:79[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m35[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    #[derive(Debug, PartialEq, Eq, ink::prelude::scale::Encode, ink::prelude::scale::Decode)][0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                              [0m[0m[1m[38;5;9m^^^^^[0m[0m [0m[0m[1m[38;5;9mcould not find `scale` in `prelude`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `core::result::Result<(), defi_erc20::Error>: Encode` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:78:70[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn transfer(&mut self, to: AccountId, value: Balance) -> Result<()> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                     [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Encode` is not implemented for `core::result::Result<(), defi_erc20::Error>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Encode` [0m[0m[1mis[0m[0m implemented for `[0m[0m[1mcore::result::Result<T, E>[0m[0m`[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `DispatchOutput`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink-4.3.0/src/codegen/dispatch/type_check.rs:69:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct DispatchOutput<T>(T)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;12m--------------[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this struct[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    T: scale::Encode + 'static;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `DispatchOutput`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `core::result::Result<(), defi_erc20::Error>: Encode` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:84:74[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m84[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn approve(&mut self, spender: AccountId, value: Balance) -> Result<()> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                         [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Encode` is not implemented for `core::result::Result<(), defi_erc20::Error>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Encode` [0m[0m[1mis[0m[0m implemented for `[0m[0m[1mcore::result::Result<T, E>[0m[0m`[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `DispatchOutput`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink-4.3.0/src/codegen/dispatch/type_check.rs:69:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct DispatchOutput<T>(T)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;12m--------------[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this struct[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    T: scale::Encode + 'static;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `DispatchOutput`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `core::result::Result<(), defi_erc20::Error>: Encode` is not satisfied[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:96:92[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m96[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn transfer_from(&mut self, from: AccountId, to: AccountId, value: Balance) -> Result<()> {[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m                                                                                           [0m[0m[1m[38;5;9m^^^^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Encode` is not implemented for `core::result::Result<(), defi_erc20::Error>`[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Encode` [0m[0m[1mis[0m[0m implemented for `[0m[0m[1mcore::result::Result<T, E>[0m[0m`[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `DispatchOutput`[0m
+[0m  [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink-4.3.0/src/codegen/dispatch/type_check.rs:69:8[0m
+[0m   [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m67[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub struct DispatchOutput<T>(T)[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m           [0m[0m[1m[38;5;12m--------------[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this struct[0m
+[0m[1m[38;5;12m68[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m69[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    T: scale::Encode + 'static;[0m
+[0m   [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `DispatchOutput`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `core::result::Result<core::result::Result<(), defi_erc20::Error>, LangError>: Encode` is not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:78:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn transfer(&mut self, to: AccountId, value: Balance) -> Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Encode` is not implemented for `core::result::Result<core::result::Result<(), defi_erc20::Error>, LangError>`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Encode` [0m[0m[1mis[0m[0m implemented for `[0m[0m[1mcore::result::Result<T, E>[0m[0m`[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `return_value`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_env-4.3.0/src/api.rs:431:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m429[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub fn return_value<R>(return_flags: ReturnFlags, return_value: &R) -> ![0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this function[0m
+[0m[1m[38;5;12m430[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m431[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    R: scale::Encode,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `return_value`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `core::result::Result<core::result::Result<(), defi_erc20::Error>, LangError>: Encode` is not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:84:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m84[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn approve(&mut self, spender: AccountId, value: Balance) -> Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Encode` is not implemented for `core::result::Result<core::result::Result<(), defi_erc20::Error>, LangError>`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Encode` [0m[0m[1mis[0m[0m implemented for `[0m[0m[1mcore::result::Result<T, E>[0m[0m`[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `return_value`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_env-4.3.0/src/api.rs:431:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m429[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub fn return_value<R>(return_flags: ReturnFlags, return_value: &R) -> ![0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this function[0m
+[0m[1m[38;5;12m430[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m431[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    R: scale::Encode,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `return_value`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0277][0m[0m[1m: the trait bound `core::result::Result<core::result::Result<(), defi_erc20::Error>, LangError>: Encode` is not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:96:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m96[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn transfer_from(&mut self, from: AccountId, to: AccountId, value: Balance) -> Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mthe trait `Encode` is not implemented for `core::result::Result<core::result::Result<(), defi_erc20::Error>, LangError>`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mhelp[0m[0m: the trait `Encode` [0m[0m[1mis[0m[0m implemented for `[0m[0m[1mcore::result::Result<T, E>[0m[0m`[0m
+[0m[1m[38;5;10mnote[0m[0m: required by a bound in `return_value`[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/home/codespace/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ink_env-4.3.0/src/api.rs:431:8[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m429[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub fn return_value<R>(return_flags: ReturnFlags, return_value: &R) -> ![0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;12m------------[0m[0m [0m[0m[1m[38;5;12mrequired by a bound in this function[0m
+[0m[1m[38;5;12m430[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mwhere[0m
+[0m[1m[38;5;12m431[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0m    R: scale::Encode,[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m       [0m[0m[1m[38;5;10m^^^^^^^^^^^^^[0m[0m [0m[0m[1m[38;5;10mrequired by this bound in `return_value`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `try_invoke` exists for struct `CallBuilder<DefaultEnvironment, Set<Call<DefaultEnvironment>>, Set<ExecutionInput<...>>, ...>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:78:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m78[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn transfer(&mut self, to: AccountId, value: Balance) -> Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:502:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m502[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub enum Result<T, E> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m---------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `_: Decode`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the full type name has been written to '/workspaces/ink-jet/dataset/Test-Cargo/target/ink/wasm32-unknown-unknown/release/deps/Lending-0f1d655f7322405b.long-type-15085100867528632052.txt'[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m            `core::result::Result<(), defi_erc20::Error>: parity_scale_codec::Decode`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `try_invoke` exists for struct `CallBuilder<DefaultEnvironment, Set<Call<DefaultEnvironment>>, Set<ExecutionInput<...>>, ...>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:84:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m84[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn approve(&mut self, spender: AccountId, value: Balance) -> Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:502:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m502[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub enum Result<T, E> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m---------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `_: Decode`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the full type name has been written to '/workspaces/ink-jet/dataset/Test-Cargo/target/ink/wasm32-unknown-unknown/release/deps/Lending-0f1d655f7322405b.long-type-15085100867528632052.txt'[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m            `core::result::Result<(), defi_erc20::Error>: parity_scale_codec::Decode`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1m[38;5;9merror[E0599][0m[0m[1m: the method `try_invoke` exists for struct `CallBuilder<DefaultEnvironment, Set<Call<DefaultEnvironment>>, Set<ExecutionInput<...>>, ...>`, but its trait bounds were not satisfied[0m
+[0m   [0m[0m[1m[38;5;12m--> [0m[0m/workspaces/ink-jet/dataset/Test-Cargo/lib.rs:96:9[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m96[0m[0m  [0m[0m[1m[38;5;12m|[0m[0m [0m[0m        pub fn transfer_from(&mut self, from: AccountId, to: AccountId, value: Balance) -> Result<()> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m        [0m[0m[1m[38;5;9m^^^[0m[0m [0m[0m[1m[38;5;9mmethod cannot be called due to unsatisfied trait bounds[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m   [0m[0m[1m[38;5;12m::: [0m[0m/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:502:1[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m[1m[38;5;12m502[0m[0m [0m[0m[1m[38;5;12m|[0m[0m [0m[0mpub enum Result<T, E> {[0m
+[0m    [0m[0m[1m[38;5;12m| [0m[0m[1m[38;5;12m---------------------[0m[0m [0m[0m[1m[38;5;12mdoesn't satisfy `_: Decode`[0m
+[0m    [0m[0m[1m[38;5;12m|[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the full type name has been written to '/workspaces/ink-jet/dataset/Test-Cargo/target/ink/wasm32-unknown-unknown/release/deps/Lending-0f1d655f7322405b.long-type-10398867939614765708.txt'[0m
+[0m    [0m[0m[1m[38;5;12m= [0m[0m[1mnote[0m[0m: the following trait bounds were not satisfied:[0m
+[0m            `core::result::Result<(), defi_erc20::Error>: parity_scale_codec::Decode`[0m
+
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mSome errors have detailed explanations: E0277, E0433, E0599.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[0m[1mFor more information about an error, try `rustc --explain E0277`.[0m
+[1m[36m    Building[0m [=======================> ] 124/125: Lending(bin)                                    
+[K[1m[31merror[0m[1m:[0m could not compile `Lending` (bin "Lending") due to 11 prevERROR: command ["/home/codespace/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo", "build", "--color=always", "--target=wasm32-unknown-unknown", "-Zbuild-std=core,alloc", "--no-default-features", "--release", "--target-dir=/workspaces/ink-jet/dataset/Test-Cargo/target/ink", "--features", "ink/ink-debug"] exited with code 101
