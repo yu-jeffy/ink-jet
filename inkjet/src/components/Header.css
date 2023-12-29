@@ -1,0 +1,14 @@
+.header-banner {
+    background-color: #36454F; /* dark banner color */
+    color: #ffffff;
+    padding: 16px;
+    text-align: left;
+}
+
+.header-title {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
+    margin: 0;
+    padding-left: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
