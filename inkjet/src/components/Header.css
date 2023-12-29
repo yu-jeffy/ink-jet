@@ -3,10 +3,11 @@
     color: #ffffff;
     padding: 16px;
     text-align: left;
+    height: 4vh;
 }
 
 .header-title {
-    font-size: 1.875rem; /* 30px */
+    font-size: 1.875rem;
     font-weight: 700;
     margin: 0;
     padding-left: 16px;

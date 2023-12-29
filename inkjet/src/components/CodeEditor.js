@@ -22,12 +22,18 @@ const CodeEditor = () => {
     <div className="code-editor-container">
       <h2 className="editor-title">Smart Contract Code</h2>
       <Editor
-        height="50vh"
+        height= "65vh"
         onChange={handleEditorChange}
         onMount={handleEditorDidMount}
-        defaultLanguage="rust"
+        defaultLanguage="Rust"
         defaultValue="// Example ink! smart contract code"
-        options={{ automaticLayout: true }}
+        options={{
+            automaticLayout: true,
+            cursorStyle: 'line',
+            cursorBlinking: 'blink',
+            cursorWidth: 2, // Set the cursor width
+            cursorSmoothCaretAnimation: true, // Enable smooth animation
+         }}
       />
       <div className="editor-footer">
         <div className="editor-templates">

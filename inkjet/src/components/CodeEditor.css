@@ -1,48 +1,55 @@
 .code-editor-container {
     padding: 16px;
+    box-sizing: border-box;
     border-radius: 8px;
     background-color: white;
-    color: #111827; /* Tailwind color gray-800 */
-  }
-  
-  .editor-title {
-    font-size: 1.25rem; /* 20px */
+    color: #111827;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-title {
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 16px;
-  }
-  
-  .editor-footer {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.editor-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 16px;
-  }
-  
-  .editor-templates {
+}
+
+.editor-templates {
     display: flex;
     align-items: center;
-  }
-  
-  .templates-label {
+}
+
+.templates-label {
     margin-right: 8px;
-  }
-  
-  .templates-select {
-    border: 1px solid #d1d5db; /* Tailwind color gray-300 */
+}
+
+.templates-select {
+    border: 1px solid #d1d5db;
     padding: 8px;
     border-radius: 8px;
-  }
-  
-  .analyze-button {
-    background-color: #4f46e5; /* Tailwind color indigo-600 */
+}
+
+.analyze-button {
+    background-color: #4f46e5;
     color: white;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .analyze-button:hover {
-    background-color: #4338ca; /* Tailwind color indigo-700 */
-  }
+}
+
+.analyze-button:hover {
+    background-color: #dcb43e;
+    border-color: white;
+}
