@@ -22,6 +22,8 @@ Our team's motivation for the project is twofold. First, we are supporters of de
 
 #### UI:
 
+![Extension](https://github.com/yu-jeffy/ink-jet/blob/main/inkjet_extension.png)
+
 The extension will be displayed in the primary/left sidebar of the VS Code window, replacing the file explorer when open. It will have vertically stacked sections, featuring a chat, chat settings, analysis, and templates. These will be resizable if the user wishes to view a certain section in a larger space.
 
 The chat will be similar to the Copilot Chat feature, where the user can converse with our model, and have their prompts enhanced through the RAG pipeline. They can ask questions about documentation or general software engineering by directly messaging the model.
